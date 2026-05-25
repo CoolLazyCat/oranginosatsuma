@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autodidact Cat - Languages</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --desc-color:#ACABAB;
+  --station-color:#f97803;
+  --bg:#404040;
+  --card:#4a4a4a;
+}
+
+/* GLOBAL */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Quicksand',sans-serif;
+}
+
+html,body{
+  background:var(--bg);
+  color:var(--desc-color);
+}
+
+/* WRAPPER */
+.wix-wrapper{
+  max-width:12cm;
+  margin:0 auto;
+  padding:1em;
+}
+
+/* HERO */
+.hero{
+  padding:1.5rem;
+  margin-bottom:2rem;
+}
+
+.hero h1{
+  color:#fff;
+  font-size:28px;
+  margin-bottom:0.5rem;
+}
+
+.hero p{
+  line-height:1.6;
+  margin-bottom:0.6rem;
+}
+
+/* SECTION */
+.section{
+  background:var(--card);
+  border-radius:14px;
+  padding:1.4rem;
+  margin-bottom:1.6rem;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+.section h3{
+  color:#fff;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* STATIONS */
+.station.youtube{
+  display:grid;
+  grid-template-columns:96px auto 40px;
+  gap:1em;
+  align-items:center;
+  margin-bottom:2em;
+}
+
+.station.youtube img.thumb{
+  width:96px;
+  height:54px;
+  object-fit:cover;
+  border-radius:4px;
+  transition:0.2s;
+}
+
+.station.youtube img.thumb:hover{
+  transform:scale(1.05);
+}
+
+.meta h2{
+  color:var(--station-color);
+  font-size:14px;
+}
+
+.meta h5{
+  color:#fff;
+  font-size:11px;
+}
+
+.meta p{
+  font-size:11px;
+}
+
+/* LANG DOTS */
+.lang{
+  text-align:center;
+  font-size:10px;
+}
+
+.lang .dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  display:inline-block;
+}
+
+.lang.EN .dot{background:red;}
+.lang.DE .dot{background:orange;}
+.lang.FR .dot{background:blue;}
+.lang.IT .dot{background:green;}
+
+/* MOBILE */
+@media(max-width:767px){
+  .station.youtube{
+    grid-template-columns:80px auto 30px;
+  }
+  .station.youtube img.thumb{
+    width:80px;
+    height:45px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wix-wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Autodidact Cat</h1>
+    <p><em>'I think, therefore I am a Cat'</em></p>
+    <p><strong>&lt;&lt; Cogito, ergo FELINUS sum &gt;&gt;</strong></p>
+    <p>
+      Explore English, German, French, and Italian through curated immersive content.<br>
+      YouTube playlists for real audio exposure and learning.<br>
+      Built to improve listening, expand vocabulary, and support language acquisition.
+    </p>
+  </div>
+
+  <main>
+
+    <!-- ENGLISH -->
+    <section class="section">
+      <h3>🇬🇧 ENGLISH</h3>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/@PoirotMysteriees" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/Hzhlwcnl5os/hqdefault.jpg">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Poirot Mysteries</h2>
+          <p>Agatha Christie</p>
+        </div>
+        <div class="lang EN"><span class="dot"></span>EN</div>
+      </div>
+
+    </section>
+
+    <!-- GERMAN -->
+    <section class="section">
+      <h3>🇩🇪 DEUTSCH</h3>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLs7zUO7VPyJ5razSfhOUVbTv9q6SAuPx-" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/SrcZ2ud4T3o/hqdefault.jpg">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Nicos Weg (A1-B1)</h2>
+          <p>DW Deutsch Lernen</p>
+        </div>
+        <div class="lang DE"><span class="dot"></span>DE</div>
+      </div>
+
+    </section>
+
+    <!-- FRENCH -->
+    <section class="section">
+      <h3>🇫🇷 FRANÇAIS</h3>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PL4c1epf9LD7HGk0_zEfyQkpN-_hrCu6nO" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/sdazKvsfa7k/hqdefault.jpg">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Cours de français</h2>
+          <p>Grammaire & immersion</p>
+        </div>
+        <div class="lang FR"><span class="dot"></span>FR</div>
+      </div>
+
+    </section>
+
+    <!-- ITALIAN -->
+    <section class="section">
+      <h3>🇮🇹 ITALIANO</h3>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLbPZDOJj757FGoct5pdcVAbdpeuV6aGZB" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/EN3BLMPVAT4/hqdefault.jpg">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Italiano A1</h2>
+          <p>Passione Italiana</p>
+        </div>
+        <div class="lang IT"><span class="dot"></span>IT</div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
