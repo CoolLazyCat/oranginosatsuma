@@ -3,133 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Autodidact Cat - Languages</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --desc-color:#ACABAB;
-  --station-color:#f97803;
-  --bg:#404040;
-  --card:#4a4a4a;
+  --desc-color: #ACABAB;
+  --station-color: #f97803;
+  --bg: #404040;
+  --card: #2f2f2f;
+  --line-spacing: 2em;
 }
 
-/* GLOBAL */
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:'Quicksand',sans-serif;
+/* OWN THE VOID */
+html, body {
+  background: var(--bg) !important;
+  color: var(--desc-color);
 }
 
-html,body{
-  background:var(--bg);
-  color:var(--desc-color);
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* WRAPPER */
-.wix-wrapper{
-  max-width:12cm;
-  margin:0 auto;
-  padding:1em;
+.wix-wrapper {
+  max-width: 12cm;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 1em;
 }
 
-/* HERO */
-.hero{
-  padding:1.5rem;
-  margin-bottom:2rem;
+/* HEADER TEXT BLOCK (your intro) */
+.header {
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.hero h1{
-  color:#fff;
-  font-size:28px;
-  margin-bottom:0.5rem;
+.header h1 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
 }
 
-.hero p{
-  line-height:1.6;
-  margin-bottom:0.6rem;
+.header p {
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 /* SECTION */
-.section{
-  background:var(--card);
-  border-radius:14px;
-  padding:1.4rem;
-  margin-bottom:1.6rem;
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+.section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.section h3{
-  color:#fff;
-  margin-bottom:1rem;
-  display:flex;
-  align-items:center;
-  gap:8px;
+.section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* STATIONS */
-.station.youtube{
-  display:grid;
-  grid-template-columns:96px auto 40px;
-  gap:1em;
-  align-items:center;
-  margin-bottom:2em;
+/* YOUTUBE ROW */
+.station.youtube {
+  display: grid;
+  grid-template-columns: 96px auto 40px;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: var(--line-spacing);
 }
 
-.station.youtube img.thumb{
-  width:96px;
-  height:54px;
-  object-fit:cover;
-  border-radius:4px;
-  transition:0.2s;
+.station.youtube img.thumb {
+  width: 96px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: 0.2s;
 }
 
-.station.youtube img.thumb:hover{
-  transform:scale(1.05);
+.station.youtube img.thumb:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
-.meta h2{
-  color:var(--station-color);
-  font-size:14px;
+/* META */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
 }
 
-.meta h5{
-  color:#fff;
-  font-size:11px;
+.meta h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--station-color);
 }
 
-.meta p{
-  font-size:11px;
+.meta h5 {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
 }
 
-/* LANG DOTS */
-.lang{
-  text-align:center;
-  font-size:10px;
+.meta p {
+  font-size: 11px;
+  color: var(--desc-color);
 }
 
-.lang .dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  display:inline-block;
+/* LANGUAGE DOT */
+.lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  gap: 2px;
 }
 
-.lang.EN .dot{background:red;}
-.lang.DE .dot{background:orange;}
-.lang.FR .dot{background:blue;}
-.lang.IT .dot{background:green;}
+.lang .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 
-/* MOBILE */
-@media(max-width:767px){
-  .station.youtube{
-    grid-template-columns:80px auto 30px;
+.lang.EN .dot { background: red; }
+.lang.DE .dot { background: orange; }
+.lang.FR .dot { background: blue; }
+.lang.IT .dot { background: green; }
+
+/* FLAGS */
+.flag {
+  width: 36px;
+  height: 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .station.youtube {
+    grid-template-columns: 80px auto 30px;
+    gap: 0.5em;
   }
-  .station.youtube img.thumb{
-    width:80px;
-    height:45px;
+
+  .station.youtube img.thumb {
+    width: 80px;
+    height: 45px;
   }
 }
 </style>
@@ -139,12 +170,12 @@ html,body{
 
 <div class="wix-wrapper">
 
-  <!-- HERO -->
-  <div class="hero">
+  <!-- HEADER -->
+  <div class="header">
     <h1>Autodidact Cat</h1>
-    <p><em>'I think, therefore I am a Cat'</em></p>
-    <p><strong>&lt;&lt; Cogito, ergo FELINUS sum &gt;&gt;</strong></p>
     <p>
+      <i>I think, therefore I am a Cat</i><br>
+      << Cogito, ergo FELINUS sum >><br><br>
       Explore English, German, French, and Italian through curated immersive content.<br>
       YouTube playlists for real audio exposure and learning.<br>
       Built to improve listening, expand vocabulary, and support language acquisition.
@@ -153,7 +184,7 @@ html,body{
 
   <main>
 
-    <!-- ENGLISH -->
+    <!-- ================= ENGLISH ================= -->
     <section class="section">
       <h3>🇬🇧 ENGLISH</h3>
 
@@ -163,15 +194,27 @@ html,body{
         </a>
         <div class="meta">
           <h5>Playlist</h5>
-          <h2>Poirot Mysteries</h2>
-          <p>Agatha Christie</p>
+          <h2>Agatha Christie's Poirot</h2>
+          <p>Poirot Mysteries</p>
         </div>
-        <div class="lang EN"><span class="dot"></span>EN</div>
+        <div class="lang EN"><span class="dot"></span><span>EN</span></div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/@BakerStreetSleuth/videos" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/2ZV4YNMmu-g/hqdefault.jpg">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Sherlock Holmes</h2>
+          <p>BakerStreetSleuth</p>
+        </div>
+        <div class="lang EN"><span class="dot"></span><span>EN</span></div>
       </div>
 
     </section>
 
-    <!-- GERMAN -->
+    <!-- ================= GERMAN ================= -->
     <section class="section">
       <h3>🇩🇪 DEUTSCH</h3>
 
@@ -181,15 +224,15 @@ html,body{
         </a>
         <div class="meta">
           <h5>Playlist</h5>
-          <h2>Nicos Weg (A1-B1)</h2>
+          <h2>Nicos Weg</h2>
           <p>DW Deutsch Lernen</p>
         </div>
-        <div class="lang DE"><span class="dot"></span>DE</div>
+        <div class="lang DE"><span class="dot"></span><span>DE</span></div>
       </div>
 
     </section>
 
-    <!-- FRENCH -->
+    <!-- ================= FRENCH ================= -->
     <section class="section">
       <h3>🇫🇷 FRANÇAIS</h3>
 
@@ -200,14 +243,14 @@ html,body{
         <div class="meta">
           <h5>Playlist</h5>
           <h2>Cours de français</h2>
-          <p>Grammaire & immersion</p>
+          <p>Guillaume Posé</p>
         </div>
-        <div class="lang FR"><span class="dot"></span>FR</div>
+        <div class="lang FR"><span class="dot"></span><span>FR</span></div>
       </div>
 
     </section>
 
-    <!-- ITALIAN -->
+    <!-- ================= ITALIAN ================= -->
     <section class="section">
       <h3>🇮🇹 ITALIANO</h3>
 
@@ -217,10 +260,10 @@ html,body{
         </a>
         <div class="meta">
           <h5>Playlist</h5>
-          <h2>Italiano A1</h2>
+          <h2>Lezioni di italiano</h2>
           <p>Passione Italiana</p>
         </div>
-        <div class="lang IT"><span class="dot"></span>IT</div>
+        <div class="lang IT"><span class="dot"></span><span>IT</span></div>
       </div>
 
     </section>
@@ -230,4 +273,3 @@ html,body{
 
 </body>
 </html>
-
