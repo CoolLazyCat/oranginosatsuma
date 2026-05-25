@@ -3,55 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <title>Orangino Satsuma</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f2efe7;
       color: #333;
-      max-width: 900px;
-      margin: 60px auto;
-      line-height: 1.6;
+      max-width: 1100px;
+      margin: 50px auto;
       padding: 0 20px;
-    }
-
-    nav {
-      margin-bottom: 40px;
-    }
-
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #333;
     }
 
     h1 {
       font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .intro {
+      margin-bottom: 40px;
+      color: #444;
+      max-width: 700px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-decoration: none;
+      color: #333;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      border-color: #999;
+    }
+
+    .img {
+      height: 120px;
+      background: #e8e4db;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .desc {
+      font-size: 12px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="#tools">Tools</a>
-    <a href="#markets">Markets</a>
-    <a href="#news">News</a>
-  </nav>
-
   <h1>Orangino Satsuma</h1>
 
-  <p>
-    Minimal, structured web archive for work, learning, and global reference.
-  </p>
+  <div class="intro">
+    A structured magazine of curated knowledge: language, markets, culture, puzzles, and global reference systems.
+  </div>
 
-  <h2 id="tools">Language & Writing Tools</h2>
-  <p>Placeholder section.</p>
+  <div class="grid">
 
-  <h2 id="markets">Trading Dashboard</h2>
-  <p>Placeholder section.</p>
+    <a class="card" href="welcome.html">
+      <div class="img"></div>
+      <div class="title">Welcome</div>
+      <div class="desc">Entry point and orientation</div>
+    </a>
 
-  <h2 id="news">World News & Radio</h2>
-  <p>Placeholder section.</p>
+    <a class="card" href="wordsmith.html">
+      <div class="img"></div>
+      <div class="title">Wordsmith</div>
+      <div class="desc">Writing and expression</div>
+    </a>
+
+    <a class="card" href="languages.html">
+      <div class="img"></div>
+      <div class="title">Languages</div>
+      <div class="desc">Structure of communication</div>
+    </a>
+
+    <a class="card" href="news.html">
+      <div class="img"></div>
+      <div class="title">News</div>
+      <div class="desc">Global information flow</div>
+    </a>
+
+    <a class="card" href="markets.html">
+      <div class="img"></div>
+      <div class="title">Markets</div>
+      <div class="desc">Trading and financial systems</div>
+    </a>
+
+    <a class="card" href="oil.html">
+      <div class="img"></div>
+      <div class="title">Oil</div>
+      <div class="desc">Energy and macro dynamics</div>
+    </a>
+
+    <a class="card" href="puzzles.html">
+      <div class="img"></div>
+      <div class="title">Puzzles</div>
+      <div class="desc">Logic and problem solving</div>
+    </a>
+
+    <a class="card" href="radio.html">
+      <div class="img"></div>
+      <div class="title">Radio</div>
+      <div class="desc">Audio and broadcasts</div>
+    </a>
+
+    <a class="card" href="classical.html">
+      <div class="img"></div>
+      <div class="title">Classical</div>
+      <div class="desc">Structured musical heritage</div>
+    </a>
+
+  </div>
 
 </body>
 </html>
