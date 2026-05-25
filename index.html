@@ -21,21 +21,32 @@
 
     .intro {
       margin-bottom: 40px;
+      max-width: 750px;
       color: #444;
-      max-width: 700px;
     }
 
-    /* GRID */
+    .row {
+      margin-bottom: 35px;
+    }
+
+    .row-title {
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 15px;
     }
 
     .card {
       background: #fff;
       border: 1px solid #ddd;
-      padding: 15px;
+      padding: 14px;
       text-decoration: none;
       color: #333;
       transition: 0.2s ease;
@@ -47,18 +58,18 @@
     }
 
     .img {
-      height: 120px;
+      height: 90px;
       background: #e8e4db;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .title {
-      font-size: 16px;
-      margin-bottom: 5px;
+      font-size: 14px;
+      margin-bottom: 4px;
     }
 
     .desc {
-      font-size: 12px;
+      font-size: 11px;
       color: #666;
     }
   </style>
@@ -69,65 +80,119 @@
   <h1>Orangino Satsuma</h1>
 
   <div class="intro">
-    A structured magazine of curated knowledge: language, markets, culture, puzzles, and global reference systems.
+    A structured magazine of curated knowledge: systems of language, markets, culture, sound, cognition, and everyday life.
   </div>
 
-  <div class="grid">
+  <!-- ROW 1 -->
+  <div class="row">
+    <div class="row-title">Orientation</div>
+    <div class="grid">
 
-    <a class="card" href="welcome.html">
-      <div class="img"></div>
-      <div class="title">Welcome</div>
-      <div class="desc">Entry point and orientation</div>
-    </a>
+      <a class="card" href="welcome.html">
+        <div class="img"></div>
+        <div class="title">Welcome</div>
+        <div class="desc">Entry point</div>
+      </a>
 
-    <a class="card" href="wordsmith.html">
-      <div class="img"></div>
-      <div class="title">Wordsmith</div>
-      <div class="desc">Writing and expression</div>
-    </a>
+      <a class="card" href="wordsmith.html">
+        <div class="img"></div>
+        <div class="title">Wordsmith</div>
+        <div class="desc">Language & expression</div>
+      </a>
 
-    <a class="card" href="languages.html">
-      <div class="img"></div>
-      <div class="title">Languages</div>
-      <div class="desc">Structure of communication</div>
-    </a>
+      <a class="card" href="languages.html">
+        <div class="img"></div>
+        <div class="title">Languages</div>
+        <div class="desc">Communication systems</div>
+      </a>
 
-    <a class="card" href="news.html">
-      <div class="img"></div>
-      <div class="title">News</div>
-      <div class="desc">Global information flow</div>
-    </a>
+    </div>
+  </div>
 
-    <a class="card" href="markets.html">
-      <div class="img"></div>
-      <div class="title">Markets</div>
-      <div class="desc">Trading and financial systems</div>
-    </a>
+  <!-- ROW 2 -->
+  <div class="row">
+    <div class="row-title">Information Systems</div>
+    <div class="grid">
 
-    <a class="card" href="oil.html">
-      <div class="img"></div>
-      <div class="title">Oil</div>
-      <div class="desc">Energy and macro dynamics</div>
-    </a>
+      <a class="card" href="news.html">
+        <div class="img"></div>
+        <div class="title">News</div>
+        <div class="desc">Global information flow</div>
+      </a>
 
-    <a class="card" href="puzzles.html">
-      <div class="img"></div>
-      <div class="title">Puzzles</div>
-      <div class="desc">Logic and problem solving</div>
-    </a>
+      <a class="card" href="markets.html">
+        <div class="img"></div>
+        <div class="title">Markets</div>
+        <div class="desc">Financial systems</div>
+      </a>
 
-    <a class="card" href="radio.html">
-      <div class="img"></div>
-      <div class="title">Radio</div>
-      <div class="desc">Audio and broadcasts</div>
-    </a>
+      <a class="card" href="oil.html">
+        <div class="img"></div>
+        <div class="title">Oil</div>
+        <div class="desc">Energy macrostructure</div>
+      </a>
 
-    <a class="card" href="classical.html">
-      <div class="img"></div>
-      <div class="title">Classical</div>
-      <div class="desc">Structured musical heritage</div>
-    </a>
+    </div>
+  </div>
 
+  <!-- ROW 3 -->
+  <div class="row">
+    <div class="row-title">Audio & Atmosphere</div>
+    <div class="grid">
+
+      <a class="card" href="radio.html">
+        <div class="img"></div>
+        <div class="title">Radio</div>
+        <div class="desc">Broadcast streams</div>
+      </a>
+
+      <a class="card" href="chillout.html">
+        <div class="img"></div>
+        <div class="title">Chillout Zone</div>
+        <div class="desc">Ambient / lounge / electronic</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ROW 4 -->
+  <div class="row">
+    <div class="row-title">Culture & Archive</div>
+    <div class="grid">
+
+      <a class="card" href="classical.html">
+        <div class="img"></div>
+        <div class="title">Classical</div>
+        <div class="desc">Musical heritage</div>
+      </a>
+
+      <a class="card" href="biographies.html">
+        <div class="img"></div>
+        <div class="title">Biographies</div>
+        <div class="desc">Lives & narratives</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ROW 5 -->
+  <div class="row">
+    <div class="row-title">Cognition & Life</div>
+    <div class="grid">
+
+      <a class="card" href="puzzles.html">
+        <div class="img"></div>
+        <div class="title">Puzzles</div>
+        <div class="desc">Logic & structure</div>
+      </a>
+
+      <a class="card" href="food.html">
+        <div class="img"></div>
+        <div class="title">Food</div>
+        <div class="desc">Everyday systems</div>
+      </a>
+
+    </div>
   </div>
 
 </body>
