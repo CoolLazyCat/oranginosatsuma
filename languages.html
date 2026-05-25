@@ -168,108 +168,792 @@ html, body {
 
 <body>
 
+
+
+Autodidact Cat
+
+
+'I think, therefore I am a Cat'
+<< Cogito, ergo FELINUS sum >>
+Explore English, German, French, and Italian through curated immersive content.
+YouTube playlists for real audio exposure and learning.
+Built to improve listening, expand vocabulary, and support language acquisition.​
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --desc-color: #ACABAB;
+  --station-color: #f97803;
+  --bg: #404040;
+  --line-spacing: 2em;
+}
+
+  /* SECTION CARD */
+  .section {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 1.4rem;
+    margin-bottom: 1.6rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  
+/* OWN THE VOID */
+html,
+body {
+  background: var(--bg) !important;
+  color: var(--desc-color);
+}
+
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* MAIN CONTENT WRAPPER */
+.wix-wrapper {
+  max-width: 12cm;
+  background: var(--bg);
+  color: var(--desc-color);
+  padding: 1em;
+}
+
+/* EXTRA SAFETY FOR WIX MOBILE */
+main {
+  background: var(--bg);
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 3em;
+}
+
+.section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* STATIONS (YOUTUBE) */
+.station.youtube {
+  display: grid;
+  grid-template-columns: 96px auto 40px;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: var(--line-spacing);
+}
+
+.station.youtube img.thumb {
+  width: 96px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.station.youtube img.thumb:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.station.youtube .meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.station.youtube .meta h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--station-color);
+}
+
+.station.youtube .meta h5 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.station.youtube .meta p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--desc-color);
+}
+
+/* LANGUAGE DOTS */
+.lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  gap: 2px;
+}
+
+.lang .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.lang.EN .dot { background: red; }
+.lang.DE .dot { background: orange; }
+.lang.FR .dot { background: blue; }
+.lang.IT .dot { background: green; }
+
+/* FLAGS IN HEADINGS */
+.flag {
+  width: 36px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 767px) {
+  .station.youtube {
+    grid-template-columns: 80px auto 30px;
+    gap: 0.5em;
+    margin-left: 0 !important;
+  }
+  .station.youtube img.thumb {
+    width: 80px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .station.youtube {
+    margin-left: 2em;
+  }
+}
+</style>
+
 <div class="wix-wrapper">
-
-  <!-- HEADER -->
-  <div class="header">
-    <h1>Autodidact Cat</h1>
-    <p>
-      <i>I think, therefore I am a Cat</i><br>
-      << Cogito, ergo FELINUS sum >><br><br>
-      Explore English, German, French, and Italian through curated immersive content.<br>
-      YouTube playlists for real audio exposure and learning.<br>
-      Built to improve listening, expand vocabulary, and support language acquisition.
-    </p>
-  </div>
-
   <main>
 
-    <!-- ================= ENGLISH ================= -->
+    <!-- =========================
+         YOUTUBE PLAYLISTS BY LANGUAGE
+         ========================= -->
+<!-- ENGLISH -->
     <section class="section">
-      <h3>🇬🇧 ENGLISH</h3>
+      <h3><img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_4f9167d424e044c2957e64d20dd88e80.svg" alt="UK" title="United Kingdom">ENGLISH</h3>
 
       <div class="station youtube">
         <a href="https://www.youtube.com/@PoirotMysteriees" target="_blank">
-          <img class="thumb" src="https://img.youtube.com/vi/Hzhlwcnl5os/hqdefault.jpg">
+          <img class="thumb" src="https://img.youtube.com/vi/Hzhlwcnl5os/hqdefault.jpg" alt="Poirot Mysteries">
         </a>
         <div class="meta">
           <h5>Playlist</h5>
           <h2>Agatha Christie's Poirot</h2>
+          <h5>YouTube Channel</h5>
           <p>Poirot Mysteries</p>
         </div>
-        <div class="lang EN"><span class="dot"></span><span>EN</span></div>
+        <div class="lang EN">
+          <span class="dot"></span>
+          <span>EN</span>
+        </div>
       </div>
 
       <div class="station youtube">
         <a href="https://www.youtube.com/@BakerStreetSleuth/videos" target="_blank">
-          <img class="thumb" src="https://img.youtube.com/vi/2ZV4YNMmu-g/hqdefault.jpg">
+          <img class="thumb" src="https://img.youtube.com/vi/2ZV4YNMmu-g/hqdefault.jpg" alt="Sherlock Holmes">
         </a>
         <div class="meta">
           <h5>Playlist</h5>
-          <h2>Sherlock Holmes</h2>
+          <h2>Sir Arthur Conan Doyle's Sherlock</h2>
+          <h5>YouTube Channel</h5>
           <p>BakerStreetSleuth</p>
         </div>
-        <div class="lang EN"><span class="dot"></span><span>EN</span></div>
+        <div class="lang EN">
+          <span class="dot"></span>
+          <span>EN</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/watch?v=UlvHg48Adec" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/UlvHg48Adec/hqdefault.jpg" alt="His Dark Materials">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>His Dark Materials: Northern Lights, <br> The Subtle Knife, The Amber Spyglass</h2>
+          <h5>YouTube Channel</h5>
+          <p>Whispered Audiobooks</p>
+        </div>
+        <div class="lang EN">
+          <span class="dot"></span>
+          <span>EN</span>
+        </div>
       </div>
 
     </section>
 
-    <!-- ================= GERMAN ================= -->
     <section class="section">
-      <h3>🇩🇪 DEUTSCH</h3>
+      <h3><img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_24e9f7966a5a4eef873cbc0edb3c0098.svg" alt="DE" title="Germany">
+DEUTSCH</h3>
 
       <div class="station youtube">
         <a href="https://www.youtube.com/playlist?list=PLs7zUO7VPyJ5razSfhOUVbTv9q6SAuPx-" target="_blank">
-          <img class="thumb" src="https://img.youtube.com/vi/SrcZ2ud4T3o/hqdefault.jpg">
+          <img class="thumb" src="https://img.youtube.com/vi/SrcZ2ud4T3o/hqdefault.jpg" alt="Nicos Weg">
         </a>
         <div class="meta">
           <h5>Playlist</h5>
-          <h2>Nicos Weg</h2>
-          <p>DW Deutsch Lernen</p>
+          <h2>Nicos Weg (A1-B1)</h2>
+          <h5>YouTube Channel</h5>
+          <p>Deutsch lernen mit der DW</p>
         </div>
-        <div class="lang DE"><span class="dot"></span><span>DE</span></div>
+        <div class="lang DE">
+          <span class="dot"></span>
+          <span>DE</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLB92CD6B288E5DB61" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/IBeYiSVt_T4/hqdefault.jpg" alt="Jojo sucht das Glück (B1/B2)">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Jojo sucht das Glück (B1/B2)</h2>
+          <h5>YouTube Channel</h5>
+          <p>Deutsch lernen mit der DW</p>
+        </div>
+        <div class="lang DE">
+          <span class="dot"></span>
+          <span>DE</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLYzp2xhTw9W1NtV8VncZ4-sB55f7TZub6" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/5poZVylM920/hqdefault.jpg" alt="Learn German with Anja">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>German Grammar Explained Easily</h2>
+          <h5>YouTube Channel</h5>
+          <p>Learn German with Anja</p>
+        </div>
+        <div class="lang DE">
+          <span class="dot"></span>
+          <span>DE</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLToQUVAivRajboahHDUsQAoE2PK0Bsq1Q" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/aXfqQQ94e90/hqdefault.jpg" alt="Learn German Through Daily Conversations">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Learn German Through Daily Conversations</h2>
+          <h5>YouTube Channel</h5>
+          <p>Daily Deutsch</p>
+        </div>
+        <div class="lang DE">
+          <span class="dot"></span>
+          <span>DE</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLuQhnWeGRtVL3DtsgpKmLSXiavmP8B6qy" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/koi94pgGD9k/hqdefault.jpg" alt="German Stories for beginners">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>German Stories for Beginners (A1-A2)</h2>
+          <h5>YouTube Channel</h5>
+          <p>Listen DE</p>
+        </div>
+        <div class="lang DE">
+          <span class="dot"></span>
+          <span>DE</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PL2iJ8FtZ49mkz2lU3UHq1To7qp41D9TTv" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/5G-5_wq-K1g/hqdefault.jpg" alt="German for Beginners">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Lessons on Verbs</h2>
+          <h5>YouTube Channel</h5>
+          <p>German for Beginners</p>
+        </div>
+        <div class="lang DE">
+          <span class="dot"></span>
+          <span>DE</span>
+        </div>
       </div>
 
     </section>
 
-    <!-- ================= FRENCH ================= -->
     <section class="section">
-      <h3>🇫🇷 FRANÇAIS</h3>
+      <h3><img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_cb1d58b910c741e086858a2c54d768c1.svg" alt="FR" title="France">FRANCAIS</h3>
 
       <div class="station youtube">
         <a href="https://youtube.com/playlist?list=PL4c1epf9LD7HGk0_zEfyQkpN-_hrCu6nO" target="_blank">
-          <img class="thumb" src="https://img.youtube.com/vi/sdazKvsfa7k/hqdefault.jpg">
+          <img class="thumb" src="https://img.youtube.com/vi/sdazKvsfa7k/hqdefault.jpg" alt="Professeur de français">
         </a>
         <div class="meta">
           <h5>Playlist</h5>
           <h2>Cours de français</h2>
-          <p>Guillaume Posé</p>
+          <h5>YouTube Channel</h5>
+          <p>Guillaume Posé - Professeur de français</p>
         </div>
-        <div class="lang FR"><span class="dot"></span><span>FR</span></div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
       </div>
 
-    </section>
-
-    <!-- ================= ITALIAN ================= -->
-    <section class="section">
-      <h3>🇮🇹 ITALIANO</h3>
-
       <div class="station youtube">
-        <a href="https://www.youtube.com/playlist?list=PLbPZDOJj757FGoct5pdcVAbdpeuV6aGZB" target="_blank">
-          <img class="thumb" src="https://img.youtube.com/vi/EN3BLMPVAT4/hqdefault.jpg">
+        <a href="https://youtube.com/playlist?list=PL2u4oHkid_n2g-mBYnGoLFXLLwxsjsTrR" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/24WSXP8fbEQ/hqdefault.jpg" alt="Comme une Française">
         </a>
         <div class="meta">
           <h5>Playlist</h5>
-          <h2>Lezioni di italiano</h2>
-          <p>Passione Italiana</p>
+          <h2>Short Stories in French</h2>
+          <h5>YouTube Channel</h5>
+          <p>Comme une Française</p>
         </div>
-        <div class="lang IT"><span class="dot"></span><span>IT</span></div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
       </div>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PLnazreCxpqRl3L7L2kOo9BsCU8FOYFKch" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/V0mOUg3zK_A/hqdefault.jpg" alt="Easy French">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Grammar & Vocabulary in Slower French</h2>
+          <h5>YouTube Channel</h5>
+          <p>Easy French</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PLNdttfDSnqlrKIoEA8hs31SYsh31kM_Jr" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/BLw3sJ5yAdU/hqdefault.jpg" alt="Français avec Fred">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>French Talks</h2>
+          <h5>YouTube Channel</h5>
+          <p>Français avec Fred</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PL9qmLqC0NyQzXOGGJ6cV7M-EwC_rJOcma" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/ecQ-_usgnEM/hqdefault.jpg" alt="Phonétique française">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Phonétique française</h2>
+          <h5>YouTube Channel</h5>
+          <p>French School TV</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PLcoQWyFpRIxjqHAr-WgPu6C0whuKH8tk7" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/ias_lZDHeCg/hqdefault.jpg" alt="Français avec Pierre">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>French Grammar</h2>
+          <h5>YouTube Channel</h5>
+          <p>Français avec Pierre</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/playlist?list=PLcoQWyFpRIxj6J0PAo_3SAJkCInMsoRoC" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/V7NJVSesX_M/hqdefault.jpg" alt="Français avec Pierre">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>French Vocabulary and Expressions</h2>
+          <h5>YouTube Channel</h5>
+          <p>Français avec Pierre</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PL9qmLqC0NyQyAnr4lf6LOXSx6w-3KBON5" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/ecUKoQsxla8/hqdefault.jpg" alt="Grammaire niveau B1">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Grammaire niveau B1</h2>
+          <h5>YouTube Channel</h5>
+          <p>French School TV</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://youtube.com/playlist?list=PL9qmLqC0NyQzjoTg2gs5rsFlCSPlWzT4v" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/3L1tD7RiVjA/hqdefault.jpg" alt="Vocabulaire niveau B1">
+        </a>
+        <div class="meta">
+          <h5>Playlist</h5>
+          <h2>Vocabulaire niveau B1</h2>
+          <h5>YouTube Channel</h5>
+          <p>French School TV</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+
+      <div class="station youtube">
+        <a href="https://www.youtube.com/@delfb1895" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/4V2U6nxUHRE/hqdefault.jpg" alt="French DELF B1 videos">
+        </a>
+        <div class="meta">
+          <h5>Channel</h5>
+          <h2>DELF B1</h2>
+          <h5>YouTube Channel</h5>
+          <p>Delf B1 Practice</p>
+        </div>
+        <div class="lang FR">
+          <span class="dot"></span>
+          <span>FR</span>
+        </div>
+      </div>
+      
+      <div class="station youtube">
+  <a href="https://youtube.com/playlist?list=PL9qmLqC0NyQx_3PlTV85d4owTf2u3GPTC" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/V8twh4d5Wh8/hqdefault.jpg" alt="DELF NIVEAU B1">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>DELF NIVEAU B1</h2>
+    <h5>YouTube Channel</h5>
+    <p>French School TV</p>
+  </div>
+  <div class="lang FR">
+    <span class="dot"></span>
+    <span>FR</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://youtube.com/playlist?list=PL9qmLqC0NyQyTp8EdF-0aWsbkg6V5yCgp" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/IyLJhNM74Ps/hqdefault.jpg" alt="Cours de grammaire B1/B2">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Cours de grammaire B1/B2</h2>
+    <h5>YouTube Channel</h5>
+    <p>French School TV</p>
+  </div>
+  <div class="lang FR">
+    <span class="dot"></span>
+    <span>FR</span>
+  </div>
+</div>
+
+
+    </section>
+
+    <section class="section">
+      <h3><img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_a12952647e0c4041b5dd608eedc3132b.svg" alt="IT" title="Italy">ITALIANO</h3>
+
+      
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLbPZDOJj757FGoct5pdcVAbdpeuV6aGZB" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/EN3BLMPVAT4/hqdefault.jpg" alt="Lezioni di italiano">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Lezioni di italiano - Principianti (A1)</h2>
+    <h5>YouTube Channel</h5>
+    <p>Passione Italiana</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLbPZDOJj757EWuBLW_j5fIwEWg_uQem2E" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/YkfSSKR24TU/hqdefault.jpg" alt="Lezioni di italiano">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Lezioni di italiano - Elementare (A2)</h2>
+    <h5>YouTube Channel</h5>
+    <p>Passione Italiana</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLbPZDOJj757EDBnOZKDvjDRaztfa7qqOs" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/XfIvUv3HbOE/hqdefault.jpg" alt="Lezioni di italiano">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Lezioni di italiano - Intermedio (B1)</h2>
+    <h5>YouTube Channel</h5>
+    <p>Passione Italiana</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLUcDBadaP5IX7SHCaK1qnWLyXKzROrK_y" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/FAxsjpZ4lik/hqdefault.jpg" alt="Italian Grammar">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Grammar</h2>
+    <h5>YouTube Channel</h5>
+    <p>Italy Made Easy</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLrq_qQ28dNbZVw7zA_E7N73jSaBVGNiF6" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/dZj6k-bNHtA/hqdefault.jpg" alt="Beginner Italian">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Beginner Italian (A1-A2)</h2>
+    <h5>YouTube Channel</h5>
+    <p>Prêt à parler ITALIEN (avec Enrica)</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLHI2TAm-NyNPpFJriRvVbxVoJ4jksDUUH" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/iZwRVEjMcHU/hqdefault.jpg" alt="Learn Italian in 30 Days">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Learn Italian in 30 Days</h2>
+    <h5>YouTube Channel</h5>
+    <p>Dolce Vita with Luca & Marina</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+      
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLAsRhI2uBpfUo4ffaB35OEfcwz1g9gvrC" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/0YAnUcwD1qI/hqdefault.jpg" alt="Grammatica Italiana">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Grammatica Italiana</h2>
+    <h5>YouTube Channel</h5>
+    <p> Learn Italian with Vaporetto Italiano </p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PLHI2TAm-NyNMgXEUtAeh6G35VmyBh0otm" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/LD-3aE9zteQ/hqdefault.jpg" alt="Italian Verbs">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Verbs</h2>
+    <h5>YouTube Channel</h5>
+    <p>Dolce Vita with Luca & Marina</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PL5dmev1QRt3-bKvC8-rg2a84wNqkvK67S" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/2vnbInmhE7M/hqdefault.jpg" alt="Italian Shorts">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Shorts</h2>
+    <h5>YouTube Channel</h5>
+    <p>Italiano Dinamico</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/watch?v=jhFhOz6_HHk" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/jhFhOz6_HHk/hqdefault.jpg" alt="Italian Conversation">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Conversation (A1–A2)</h2>
+    <h5>YouTube Channel</h5>
+    <p>Everyday Italian Talks</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/watch?v=TUXb5HNXy-Q" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/TUXb5HNXy-Q/hqdefault.jpg" alt="Italian Conversation">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Conversation (Intermediate Level)</h2>
+    <h5>YouTube Channel</h5>
+    <p>Everyday Italian Talks</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/watch?v=Z-JRAWzEqdI" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/Z-JRAWzEqdI/hqdefault.jpg" alt="Italian Conversation">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>How to Order in a Pizzeria in Italy</h2>
+    <h5>YouTube Channel</h5>
+    <p>Everyday Italian Talks</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PL5dmev1QRt3_ipJzZOW_DnPhJSU2sVnBd" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/vVgCU1PJQpk/hqdefault.jpg" alt="Italian Conversation">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Conversation A1-A2</h2>
+    <h5>YouTube Channel</h5>
+    <p>Italiano Dinamico</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PL5dmev1QRt39bFxvfQvv2V4om0yoj_m-m" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/UDeBHDhiHHQ/hqdefault.jpg" alt="Italian Conversation">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Conversation B1-B2</h2>
+    <h5>YouTube Channel</h5>
+    <p>Italiano Dinamico</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
+<div class="station youtube">
+  <a href="https://www.youtube.com/playlist?list=PL5dmev1QRt3-Sjn6pFJOBC7lt-BI4y7k9" target="_blank">
+    <img class="thumb" src="https://img.youtube.com/vi/sbSi39qbKHM/hqdefault.jpg" alt="Italian Conversation">
+  </a>
+  <div class="meta">
+    <h5>Playlist</h5>
+    <h2>Italian Conversation C1-C2</h2>
+    <h5>YouTube Channel</h5>
+    <p>Italiano Dinamico</p>
+  </div>
+  <div class="lang IT">
+    <span class="dot"></span>
+    <span>IT</span>
+  </div>
+</div>
+
 
     </section>
 
   </main>
 </div>
+
 
 </body>
 </html>
