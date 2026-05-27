@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Broadcasting Cat</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ======================================
+ROOT
+====================================== */
+
+:root{
+
+  --bg:#404040;
+  --card:#4b4b4b;
+  --text:#ffffff;
+  --muted:#acabab;
+  --accent:#f97803;
+
+  --border:
+    rgba(255,255,255,0.06);
+
+  --shadow:
+    0 10px 24px rgba(0,0,0,0.28);
+
+  --radius:18px;
+}
+
+/* ======================================
+RESET
+====================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+
+  color:var(--muted);
+
+  font-family:'Quicksand',sans-serif;
+
+  line-height:1.7;
+
+  display:flex;
+  justify-content:center;
+
+  padding:2.5rem 1rem 5rem;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ======================================
+LAYOUT
+====================================== */
+
+.container{
+  width:100%;
+  max-width:920px;
+}
+
+/* ======================================
+HERO
+====================================== */
+
+.hero{
+
+  margin-bottom:2.5rem;
+
+  padding:2.3rem 2rem;
+
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(249,120,3,.10),
+      rgba(255,255,255,.02)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.30);
+}
+
+.hero h1{
+
+  color:var(--text);
+
+  font-size:
+    clamp(2.2rem,5vw,3.6rem);
+
+  margin-bottom:.5rem;
+}
+
+.tagline{
+
+  color:var(--accent);
+
+  font-style:italic;
+
+  margin-bottom:1.6rem;
+}
+
+.hero p{
+  margin-bottom:1rem;
+}
+
+/* ======================================
+SECTION CARDS
+====================================== */
+
+.section{
+
+  background:var(--card);
+
+  border-radius:var(--radius);
+
+  padding:1.6rem;
+
+  margin-bottom:2rem;
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:var(--shadow);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.section:hover{
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(249,120,3,.22);
+}
+
+/* ======================================
+HEADINGS
+====================================== */
+
+.section h2{
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  color:var(--text);
+
+  font-size:1.15rem;
+
+  margin-bottom:1.8rem;
+
+  letter-spacing:.04em;
+}
+
+.flag{
+
+  width:36px;
+  height:24px;
+
+  border-radius:4px;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.25);
+}
+
+/* ======================================
+STATIONS
+====================================== */
+
+.station{
+
+  padding-bottom:1.4rem;
+
+  margin-bottom:1.4rem;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+}
+
+.station:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.station h3{
+
+  color:var(--accent);
+
+  font-size:1rem;
+
+  margin-bottom:.4rem;
+
+  transition:
+    color .2s ease;
+}
+
+.station a:hover h3{
+  color:#ff9d44;
+}
+
+.station p{
+
+  color:var(--muted);
+
+  font-size:.95rem;
+}
+
+/* ======================================
+FOOTER
+====================================== */
+
+footer{
+
+  margin-top:4rem;
+
+  text-align:center;
+
+  color:#8f8f8f;
+
+  font-size:.84rem;
+}
+
+/* ======================================
+MOBILE
+====================================== */
+
+@media(max-width:640px){
+
+  body{
+    padding:1.4rem .9rem 4rem;
+  }
+
+  .hero{
+    padding:1.8rem 1.4rem;
+  }
+
+  .section{
+    padding:1.3rem;
+  }
+
+  .section h2{
+    font-size:1rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ======================================
+HERO
+====================================== -->
+
+<header class="hero">
+
+<h1>Broadcasting Cat</h1>
+
+<p class="tagline">
+“Rundfunk” — German for “Radio” (endorsed by cats)
+</p>
+
+<p>
+Explore world radio for a relaxed and immersive listening experience.
+</p>
+
+<p>
+Discover eclectic stations and global music from France, the UK, the US, Italy and Germany.
+</p>
+
+<p>
+A curated space to enjoy new styles, practise languages and unwind through sound.
+</p>
+
+</header>
+
+<!-- UNITED KINGDOM -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_4f9167d424e044c2957e64d20dd88e80.svg" alt="UK" title="United Kingdom">
+        GREAT BRITAIN
+      </h3>
+      <div class="station">
+        <a href="https://www.bbc.co.uk/sounds/play/live/bbc_radio_three" target="_blank">
+          <h2>BBC Radio 3</h2>
+        </a>
+        <p>BBC Radio 3 is a benchmark for depth and quality, offering expert-led classical and exploratory programming across contemporary, world, and jazz.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.bbc.co.uk/sounds/play/live/bbc_radio_three_unwind" target="_blank">
+          <h2>BBC Radio 3 Unwind</h2>
+        </a>
+        <p>Continuous calm classical stream. No presenters, no surprises; decompression for overworked brains.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.classicfm.com/" target="_blank">
+          <h2>Classic FM</h2>
+        </a>
+        <p>Commercial classical radio focused on familiar, melodic repertoire, curated for broad appeal and easy listening.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.hellorayo.co.uk/jazz-fm" target="_blank">
+          <h2>Jazz FM</h2>
+        </a>
+        <p>Jazz FM offers presenter-led contemporary and classic jazz, with a lively, groove-driven, commercial sound.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.smoothradio.com/chill/" target="_blank">
+          <h2>Smooth Chill</h2>
+        </a>
+        <p>Ambient and downtempo lounge, meditative in tone, polished in sound, and effortless to live with.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.globalplayer.com/live/capitalchill/uk/" target="_blank">
+          <h2>Capital Chill</h2>
+        </a>
+        <p>Commercial chill & pop-ambient mix. Lightweight, modern, low attention cost.</p>
+      </div>
+    </section>
+
+    <!-- UNITED STATES -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_cb21d6324a554564a2dd0d942c9e7989.svg" alt="US" title="United States">
+        AMERICA
+      </h3>
+      <div class="station">
+        <a href="https://www.wqxr.org/" target="_blank">
+          <h2>WQXR (New York)</h2>
+        </a>
+        <p>Public classical radio with strong editorial standards. Elegant, intelligent programming; excellent for focused listening.</p>
+      </div>
+      <div class="station">
+        <a href="https://weta.org/fm" target="_blank">
+          <h2>WETA Classical (Washington DC)</h2>
+        </a>
+        <p>Classical public radio. Conservative, calm, dependable; very background-friendly.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.jazz24.org/" target="_blank">
+          <h2>Jazz24 (Seattle)</h2>
+        </a>
+        <p>A round-the-clock jazz stream focused on straight-ahead selections, complemented by light presenter announcements and an easy, enjoyable flow.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.wbgo.org/" target="_blank">
+          <h2>WBGO (Newark / NYC)</h2>
+        </a>
+        <p>Iconic public jazz station. Deep jazz credibility; live sessions, presenters, heritage feel.</p>
+      </div>
+    </section>
+
+<!-- FRANCE -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_cb1d58b910c741e086858a2c54d768c1.svg" alt="FR" title="France">
+        LA FRANCE
+      </h3>
+      <div class="station">
+        <a href="https://www.radiofrance.fr/francemusique" target="_blank">
+          <h2>France Musique</h2>
+        </a>
+        <p>High-culture public radio focused on classical, jazz, and contemporary art music. Refined, slow, intelligent; strong guitar, chamber music, late-night excellence.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.jazzradio.fr/radio/webradio" target="_blank">
+          <h2>Jazz Radio</h2>
+        </a>
+        <p>Jazz in many sub-genres via themed streams. Professional, curated, sometimes commercial-leaning.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiofrance.fr/fip/radio-jazz" target="_blank">
+          <h2>FIP – Jazz</h2>
+        </a>
+        <p>Jazz-focused sub-station of FIP. Smooth, modern, instrumental-heavy; perfect background sophistication.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiofrance.fr/fip" target="_blank">
+          <h2>FIP</h2>
+        </a>
+        <p>Eclectic, ad-free public radio with seamless genre transitions. Cool, curated flow; jazz, instrumental, world, ambient, zero chatter.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiofrance.fr/fip/radio-sacre-francais" target="_blank">
+          <h2>FIP – Sacré Français</h2>
+        </a>
+        <p>French music across decades and genres. Cultural immersion; chanson, film scores, instrumental gems, occasional vocals.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiofrance.fr/francebleu" target="_blank">
+          <h2>France Bleu</h2>
+        </a>
+        <p>Regional public radio network. Local news, light music, everyday France; not for deep music focus.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiofrance.fr/franceculture" target="_blank">
+          <h2>France Culture</h2>
+        </a>
+        <p>Intellectual public radio. Talk, philosophy, literature, ideas; minimal music, maximum thinking.</p>
+      </div>
+    </section>    
+    
+    <!-- ITALY -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_a12952647e0c4041b5dd608eedc3132b.svg" alt="IT" title="Italy">
+        L'ITALIA
+      </h3>
+      <div class="station">
+        <a href="https://www.raiplaysound.it/radio3" target="_blank">
+          <h2>RAI Radio 3</h2>
+        </a>
+        <p>Cultural flagship of Italian public radio. Classical, jazz, theatre, ideas; smart, slow, high signal.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.raiplaysound.it/radiotuttaitaliana" target="_blank">
+          <h2>RAI Radio Tutta Italiana</h2>
+        </a>
+        <p>A national music service dedicated to Italian repertoire across eras, with a strong emphasis on vocal tradition and cultural continuity.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiomontecarlo.net/sezioni/11020/rmc-buddha-bar-monte-carlo-radio" target="_blank">
+          <h2>Radio Monte Carlo – Buddha Bar</h2>
+        </a>
+        <p>Ambient, downtempo, lounge. Meditative, glossy, evening-friendly; zero effort listening.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.radiomontecarlo.net/sezioni/10022/webradio" target="_blank">
+          <h2>Radio Monte Carlo – Web Radios</h2>
+        </a>
+        <p>Multiple themed streams. Lifestyle-oriented, smooth, polished.</p>
+      </div>
+    </section>
+
+    <!-- GERMANY -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_24e9f7966a5a4eef873cbc0edb3c0098.svg" alt="DE" title="Germany">
+        DEUTSCHLAND
+      </h3>
+      <div class="station">
+        <a href="https://www.berliner-rundfunk.de/" target="_blank">
+          <h2>Berliner Rundfunk 91.4</h2>
+        </a>
+        <p>A classic hits station specialising in pop and rock across generations, presented with warmth, wit and joy — a reliable musical time machine in the spirit of Back to the Future.</p>
+      </div>
+    </section>
+
+    <!-- CELTIC -->
+    <section class="section">
+      <h3>🌿 CELTIC </h3>
+      <div class="station">
+        <a href="https://www.thistleradio.com/" target="_blank">
+          <h2>Thistle Radio</h2>
+        </a>
+        <p>Celtic and folk-influenced programming. Roots music, acoustic textures, calm traditionalism.</p>
+      </div>
+      <div class="station">
+        <a href="https://www.accuradio.com/radiocelt" target="_blank">
+          <h2>AccuRadio – Celtic</h2>
+        </a>
+        <p>A Celtic and folk stream curated for continuity and atmosphere, offering familiar repertoire and a steady, comforting flow.</p>
+      </div>
+        </section>
+
+<footer>
+Broadcasting Cat © 2026 • Powered by coffee, cats and suspiciously expensive headphones.
+</footer>
+
+</div>
+
+</body>
+</html>
