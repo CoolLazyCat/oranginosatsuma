@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brain Pilates</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#404040;
+  --text:#ffffff;
+  --accent:#f97803;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Quicksand', sans-serif;
+}
+
+html, body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* WRAPPER */
+.wix-wrapper{
+  max-width: 12cm;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  margin-bottom:2rem;
+}
+
+header h1{
+  font-size:22px;
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:0.6rem;
+}
+
+header p{
+  font-size:14px;
+  line-height:1.6;
+  opacity:0.9;
+}
+
+/* SECTION */
+.section{
+  margin-bottom:2.2rem;
+}
+
+.section h3{
+  font-size:18px;
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:1rem;
+  letter-spacing:0.5px;
+}
+
+/* LIST */
+.section ul{
+  list-style:none;
+}
+
+.section li{
+  margin-bottom:0.7rem;
+  font-size:15px;
+  line-height:1.4;
+}
+
+/* LINKS */
+.section a{
+  display:inline-block;
+  color:var(--text);
+  text-decoration:none;
+  padding-left:1rem;
+  position:relative;
+  transition:0.25s ease;
+}
+
+/* bullet arrow */
+.section a::before{
+  content:"›";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+  transition:0.25s ease;
+}
+
+.section a:hover{
+  color:var(--accent);
+  text-shadow:0 0 6px rgba(249,120,3,0.35);
+}
+
+.section a:hover::before{
+  transform:translateX(3px);
+}
+
+/* MOBILE SAFETY */
+@media (max-width:600px){
+  .wix-wrapper{
+    max-width:95%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wix-wrapper">
+
+<header>
+  <h1>Brain Pilates</h1>
+  <p>'A Gym for Sporty Cats' 🐾</p>
+  <p>
+    Games and puzzles for a quick mental workout.
+
+A curated space for pattern recognition, strategic thinking, and mental precision.
+
+Sharpen your cognitive agility while challenging your logic, vocabulary, and strategy skills.
+  </p>
+</header>
+
+<main>
+
+  <section class="section">
+      <h3>LOGIC &amp; ABSTRACT</h3>
+      <ul>
+        <li><a href="https://www.chess.com/play" target="_blank">Chess.com</a></li>        
+        <li><a href="https://nonogramsonline.com" target="_blank">Nonograms</a></li>
+        <li><a href="https://nonograms-katana.com/play" target="_blank">Nonograms Katana</a></li>
+        <li><a href="https://sudoku.com" target="_blank">Sudoku</a></li>
+        <li><a href="https://puzzlemadness.co.uk/hashi/medium" target="_blank">Hashi 'Bridges'</a></li>
+        <li><a href="https://puzzlemadness.co.uk" target="_blank">Collection of Logic Puzzles</a></li>
+         <li><a href="https://mahjongchest.com" target="_blank">Mahjong Chest</a></li>       
+        <li><a href="https://www.jigsawplanet.com" target="_blank">Jigsaw Planet</a></li>
+        <li><a href="https://solitaired.com" target="_blank">Solitaire</a></li>
+        <li><a href="https://online-go.com/learn-to-play-go" target="_blank">Learn to Play 'Go'</a></li>
+        <li><a href="https://www.youtube.com/watch?v=4Q9iCZkzTUk" target="_blank">Learn to Play 'Go' – YouTube</a></li>       
+         <li><a href="https://www.rubiks.com/solution-guides#more-solves" target="_blank">Rubik’s Cube Solutions</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>MAPS</h3>
+      <ul>
+        <li><a href="https://world-geography-games.com" target="_blank">World Geography – Game</a></li>
+        <li><a href="https://www.seterra.com/#quizzes" target="_blank">Seterra – 400+ Maps</a></li>
+        <li><a href="https://www.geoguessr.com" target="_blank">GeoGuessr - Google Earth</a></li>
+        <li><a href="https://www.geoguessr.com/vgp/3829" target="_blank">GeoGuessr – Periodic Table</a></li>
+        <li><a href="https://london.metro-memory.com" target="_blank">London Underground – Game</a></li>
+        <li><a href="https://tfl.gov.uk/tfl/syndication/widgets/tubemap/default-search.html" target="_blank">TfL Tube Map - Reference</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>WORD GAMES</h3>
+      <ul>
+        <li><a href="https://playscrabble.com" target="_blank">Scrabble</a></li>
+        <li><a href="https://www.nytimes.com/games/connections" target="_blank">Connections – NYT</a></li>
+        <li><a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">Wordle – NYT</a></li>
+        <li><a href="https://www.merriam-webster.com/games/quordle/#/chill" target="_blank">Quordle – Chill</a></li>
+        <li><a href="https://www.merriam-webster.com/games/quordle" target="_blank">Quordle – Classic</a></li>
+        <li><a href="https://www.britannica.com/games/octordle/daily" target="_blank">Octordle – Daily</a></li>
+        <li><a href="https://www.thewordfinder.com/wordle-solver" target="_blank">Wordle – Helper</a></li>
+          <li><a href="https://www.merriam-webster.com/wordfinder" target="_blank">Scrabble Word Finder</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>ALPHABETS</h3>
+      <ul>
+        <li><a href="https://www.theonlinegreektutor.com/the-greek-alphabet/" target="_blank">Greek Alphabet</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/NATO_phonetic_alphabet" target="_blank">NATO Phonetic Alphabet</a></li>
+        <li><a href="https://morse.withgoogle.com/learn" target="_blank">Learn Morse – Game</a></li>
+        <li><a href="https://www.youtube.com/watch?v=UJhWFOND354" target="_blank">Learn Morse – YouTube</a></li>
+        <li><a href="https://morsecode.world/international/translator.html" target="_blank">Morse Translator</a></li>
+        <li><a href="https://drlingua.com/japanese/games/kana-bento" target="_blank">Japanese Alphabets</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>TYPING</h3>
+      <ul>
+        <li><a href="https://monkeytype.com" target="_blank">Monkeytype</a></li>
+        <li><a href="https://typing-speed-test.aoeu.eu" target="_blank">Typing Speed Test</a></li>
+        <li><a href="https://www.typingtest.com" target="_blank">Typing Test</a></li>
+        <li><a href="https://www.ratatype.com" target="_blank">Type Faster</a></li>
+        <li><a href="https://www.typingclub.com" target="_blank">Typing Club</a></li>
+        <li><a href="https://www.typingstudy.com/en-uk_english-1" target="_blank">Touch Typing Study</a></li>
+        <li><a href="https://www.typing.com/en-gb/student/tests" target="_blank">Typing.com</a></li>
+        <li><a href="https://www.typing.com/es/student/typing-test/1-minute/es" target="_blank">Typing – Spanish</a></li>
+        <li><a href="https://agilefingers.com/it" target="_blank">Typing – Italian</a></li>
+      </ul>
+    </section>
+
+</main>
+</div>
+
+</body>
+</html>
