@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cathoven: A to Z</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#404040;
+  --card:#3a3a3a;
+  --station-color:#f97803;
+  --accent:#A07444;
+  --text:#ffffff;
+  --muted:#ACABAB;
+  --shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Quicksand',sans-serif;
+}
+
+html,
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+body{
+  padding:1rem;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.wrapper{
+  width:100%;
+  max-width:20cm;
+  margin:auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background:var(--card);
+  border-radius:14px;
+  padding:1.8rem;
+  margin-bottom:1.8rem;
+  box-shadow:var(--shadow);
+}
+
+.hero h1{
+  color:var(--station-color);
+  font-size:2rem;
+  margin-bottom:0.4rem;
+}
+
+.hero .classified{
+  display:inline-block;
+  margin-bottom:1rem;
+  color:#d5b98d;
+  letter-spacing:0.15em;
+  font-size:0.9rem;
+}
+
+.hero h2{
+  font-size:1.1rem;
+  margin-bottom:1rem;
+  color:#ffffff;
+}
+
+.hero p{
+  color:var(--muted);
+  line-height:1.8;
+  margin-bottom:0.8rem;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  background:var(--card);
+  border-radius:14px;
+  padding:1.4rem;
+  margin-bottom:1.8rem;
+  box-shadow:var(--shadow);
+}
+
+.section h3{
+  color:var(--station-color);
+  font-size:1.3rem;
+  margin-bottom:2rem;
+}
+
+/* =========================
+   COMPOSER BLOCK
+========================= */
+
+.station{
+  margin-bottom:1.5rem;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  padding-bottom:1.2rem;
+}
+
+.station:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.station-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  cursor:pointer;
+
+  font-size:1rem;
+  font-weight:600;
+  color:#ffffff;
+
+  line-height:1.6;
+}
+
+.station-header::after{
+  content:"▾";
+  transition:transform 0.3s ease;
+  font-size:0.9rem;
+}
+
+.station.active .station-header::after{
+  transform:rotate(180deg);
+}
+
+/* =========================
+   COLLAPSIBLE
+========================= */
+
+.playlist-wrapper{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+}
+
+.station.active .playlist-wrapper{
+  max-height:2500px;
+}
+
+/* =========================
+   PLAYLIST
+========================= */
+
+.playlist{
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+  padding-top:1rem;
+}
+
+.playlist-item{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.youtube-number{
+  width:34px;
+  height:34px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+
+  text-decoration:none;
+
+  border-radius:50%;
+  border:2px solid var(--accent);
+
+  color:#fff;
+  background:var(--bg);
+
+  font-weight:600;
+  font-size:14px;
+
+  transition:all 0.2s ease;
+
+  position:relative;
+}
+
+.youtube-number:hover{
+  background:var(--station-color);
+  color:var(--bg);
+  border-color:var(--station-color);
+}
+
+.youtube-number.visited::after{
+  content:"✔";
+  position:absolute;
+  top:1px;
+  right:1px;
+  font-size:10px;
+  color:var(--station-color);
+}
+
+/* =========================
+   TRACK NAME
+========================= */
+
+.track-name{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  body{
+    padding:0.7rem;
+  }
+
+  .hero{
+    padding:1.3rem;
+  }
+
+  .hero h1{
+    font-size:1.6rem;
+  }
+
+  .section{
+    padding:1.1rem;
+  }
+
+  .station-header{
+    font-size:0.95rem;
+  }
+
+  .track-name{
+    font-size:13px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>🎼 Cathoven: A to Z</h1>
+
+    <div class="classified">— CLASSIFIED —</div>
+
+    <h2>‘For Your Whiskers Only’</h2>
+
+    <p>
+      Alphabetical catalogue of composers, grouped by historical era.
+    </p>
+
+    <p>
+      Each entry links directly to a YouTube video, offering an immediate audio-visual experience.
+    </p>
+
+    <p>
+     Made for unhurried moments—with a coffee and a book within reach.
+    </p>
+
+  </section>
+
+ <!-- Medieval -->
+
+<section class="section">
+  <h3>Medieval</h3>
+
+
+   <!-- Hildegard of Bingen -->
+<!-- Hildegard of Bingen -->
+<div class="station">
+  <h2 class="station-header">🎻 Hildegard of Bingen</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=BugvmrdPgnU"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Repertoire by ALBA Ensemble</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_ljLNSmAFt-0EEtZkhsFOsFe-bsFxQpNHE"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">2</a>
+        <span class="track-name">Symphoniae</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=cs9A5NNKdnI"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">3</a>
+        <span class="track-name">Vox AEternitatis</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_l2jC6BBOb-nXOg1adXJDDNgwpZhqsZGZI"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">4</a>
+        <span class="track-name">Geistliche Gesänge (Sacred Hymns)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mU-u2CJaqBqrZftBcwO4flSarGdl7fHZE"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">5</a>
+        <span class="track-name">The Origin of Fire</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_nJez_L5_xEzOeIgUp4rEsPrdri_ZJIG-E"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">6</a>
+        <span class="track-name">Celestial Hierarchy</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=RRNmyj6cocQ"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">7</a>
+        <span class="track-name">Voices of Ascension</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=DvN7rINlcX4"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">8</a>
+        <span class="track-name">A Voice from Heaven</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_kkydpwx4DX93cV5BALNXXLpilY9JycwI0"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">9</a>
+        <span class="track-name">Heavenly Revelations</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLdw8sS7oEJJ07BShqjTK7S5aSGMRVK7-0"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">10</a>
+        <span class="track-name">A Feather on the Breath of God</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=G8MGiPo5IxU"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">11</a>
+        <span class="track-name">Hortus Deliciarum (Garden of Delights)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_kEUztnHAHJHeUlTqNtObkJvxIrgqtDIuM"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">12</a>
+        <span class="track-name">O Jerusalem</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=BS28jyW1bLY"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">13</a>
+        <span class="track-name">Voice of the Blood</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=lmDM6boBjxo"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">14</a>
+        <span class="track-name">O Orzchis Ecclesia (O Immense Church)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_lVUvytRbkTUUeAzHFWkzHKUgH_5vo65O4"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">15</a>
+        <span class="track-name">Saints</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Vv7Df3Z9dgE"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">16</a>
+        <span class="track-name">Ordo Virtutum (Order of Virtues)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_kq9dgy_P28XnJYqu1Ut1HIju2AORdawRY"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">17</a>
+        <span class="track-name">Canticles Of Ecstasy</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLOTWpbg6Bv7JIvMOO3UzIhYuRq5M7KWHF"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">18</a>
+        <span class="track-name">The Complete Works of Hildegard von Bingen by Sequentia</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+
+<!-- Renaissance -->
+
+<section class="section">
+  <h3>Renaissance</h3>
+
+
+ <!-- Francis Cutting -->
+<div class="station">
+  <h2 class="station-header">🎻 Francis Cutting</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=jSzzJcGGcdA"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Lute Music</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- John Dowland -->
+<div class="station">
+  <h2 class="station-header">🎻 John Dowland</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=zxD8FrR7uco&list=RDzxD8FrR7uco&start_radio=1"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Complete Lute Galliards</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Vincenzo Galilei -->
+<div class="station">
+  <h2 class="station-header">🎻 Vincenzo Galilei</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=T0AUv0g9svY"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Renaissance Lute: The Galliards of Vincenzo Galilei, Part I</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=qzuXAO6PNj8"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">2</a>
+        <span class="track-name">Renaissance Lute: The Galliards of Vincenzo Galilei, Part II</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Francesco da Milano -->
+<div class="station">
+  <h2 class="station-header">🎻 Francesco da Milano</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLa1rC97wRkZhecy21oz167kKY8nYQoZg5"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Dolcissima Et Amorosa: The Lute Music of Il Divino, Vol. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLa1rC97wRkZiuOYI4Av8XPgBXB5KGk27c"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">2</a>
+        <span class="track-name">A Decoration of Silence: The Lute Music of Il Divino, Vol. 2</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Hans Neusidler -->
+<div class="station">
+  <h2 class="station-header">🎻 Hans Neusidler</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ErPgmTZucck&list=OLAK5uy_l0om0GiLrM-BxwZXzpk4YuVLrRcnX1idM"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Wie möcht ich fröhlich warden</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Alberto da Ripa -->
+<div class="station">
+  <h2 class="station-header">🎻 Alberto da Ripa</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=S9WJvLsLZas"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Lute</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+
+<!-- Baroque -->
+
+<section class="section">
+  <h3>Baroque</h3>
+  
+
+<!-- A -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Tomaso Albinoni</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=pblCSOzzGhM" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Oboe & Violin Concerto</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- B -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Johann Sebastian Bach</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=1prweT95Mo0" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Cello Suite No. 1 in G Major – Yo-Yo Ma</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=32FpqysC1PY" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+      <span class="track-name">Complete Cello Suites</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=s_num0eZIQ8" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+      <span class="track-name">Complete Partitas</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=qWli4mESroA" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+      <span class="track-name">Suites for Guitar</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=zmEa7KX6D00" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+      <span class="track-name">French Suites</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=MWgQXlSQ7Dk" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+      <span class="track-name">Violin Concertos (2 Hours)</span>
+    </div>
+
+  </div></div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Francesco A. Bonporti</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=jtnKIvVR8xA" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Complete Sonatas for 2 Violins and B.C.</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- C -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Arcangelo Corelli</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=dROLGWhCcWY" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Dodici Concerti Grossi Op. 6</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- L -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Isabella Leonarda</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=TaCL3_flJuE" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">400 Years in 2020</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=pADg8lSxIpc" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+      <span class="track-name">Motets & Sonatas</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/playlist?list=OLAK5uy_kay1KZYiJa0G5c94ZOdc61nw8sS4YZZuU" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+      <span class="track-name">Sonate a 1–4 strumenti, Op. 16</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=05OVTqK1p68" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+      <span class="track-name">Sonata 10</span>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- P -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Johann Pachelbel</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=fXb2GO8XiJg" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">The Best of Johann Pachelbel</span>
+    </div>
+  </div></div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Henry Purcell</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=8DrkEHArwA4" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">King Arthur</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=5gjp7_bpl04" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+      <span class="track-name">The Genius of Henry Purcell</span>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- S -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Alessandro Scarlatti</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=QPCbKdqQZRE" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Sinfonias</span>
+    </div>
+  </div></div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Domenico Scarlatti</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=X-JaVGYG2i8" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Sonatas</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- T -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Philipp Telemann</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=xNFkKhfdgZM" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Complete Tafelmusik</span>
+    </div>
+  </div></div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Giuseppe Torelli</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=NGA6aZfw33c" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Italian Baroque</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- V -->
+
+<div class="station">
+  <h2 class="station-header">🎻 Nicolas Vallet</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=BBQWDwCy2Lc&list=RDAM6FEOsoLYo&index=16" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Lute Music</span>
+    </div>
+  </div></div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Antonio Vivaldi</h2>
+  <div class="playlist-wrapper"><div class="playlist">
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=S5n7Jfa7Ryk" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+      <span class="track-name">Four Seasons – Visual Journey</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=sHdjiLGNzMo" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+      <span class="track-name">Complete Cello Concertos</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=p7ZmzKUupdU" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+      <span class="track-name">Concerto for 2 Violins – Venice 4K</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=YpzSNJwHJC0&list=PLkWebe66Gsj8OSnssa3a7xGKpdE_3-570" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+      <span class="track-name">Concerto for Bassoon – Rome 4K</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=AlOPXqXncWw" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+      <span class="track-name">Violin Concertos Op. 11 & 12</span>
+    </div>
+
+    <div class="playlist-item">
+      <a href="https://www.youtube.com/watch?v=y3nm7Pg0HN8" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+      <span class="track-name">12 Concertos Op. 7</span>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- Early Classical -->
+
+<section class="section">
+  <h3>Early Classical</h3>
+
+
+  
+  <div class="station">
+  <h2 class="station-header">🎻 Luigi Boccherini</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=HHF-vPPXqe0"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Complete Cello Concertos</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLezwr_ZhM2eidN2Mk0x3-Bs_qfFM_9Wso"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">2</a>
+        <span class="track-name">String Quartets</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Kiiv-WmV26U"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">3</a>
+        <span class="track-name">String Quintets Op. 30 & Op. 31, Vol. XI</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mH0InfbsX8cVxoicICwxzpRZjjOuFFDOg"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">4</a>
+        <span class="track-name">Guitar Quintets Complete</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=AMo_XpxXR5I"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">5</a>
+        <span class="track-name">Complete Violin Sonatas, Vol. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=dRjwQFsgBWk"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">6</a>
+        <span class="track-name">Complete Violin Sonatas, Vol. 2</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Joseph de Boismortier</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=sh5A5xin4Sw"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">The Galant Frenchman</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Joseph Haydn</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Mb2TxzQsmjk"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Cello Concerto No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLr0MsaDpKsY_8tt_IcDHP5zp1psfWrhu-"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">2</a>
+        <span class="track-name">Complete String Quartets</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=55XgmvOIGCM"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">3</a>
+        <span class="track-name">The Complete London Symphonies Nos. 93–104</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=jplhJGuu8Dw"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">4</a>
+        <span class="track-name">The Complete Paris Symphonies Nos. 82–87</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="station">
+  <h2 class="station-header">🎻 Pietro Nardini</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ns17dyGbaz8"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Complete Music for 2 Violins</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 G. B. Sammartini</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=JXkH1UCByjM"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">The Galant Italian</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Giuseppe Sarti</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=esErOAMFSFk"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">6 Sonatas for Traversiere Flute and B.C.</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Giuseppe Tartini</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=p7YUYkqROt4"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">Violin Sonatas</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="station">
+  <h2 class="station-header">🎻 Carlo Tessarini</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Mf5-YF12p5I"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="youtube-number">1</a>
+        <span class="track-name">6 Violin Sonatas Op. 14, 6 Trio Sonatas Op. 9</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- Classical -->
+
+<section class="section">
+  <h3>Classical</h3>
+
+  
+  
+  <!-- Beethoven -->
+<div class="station">
+  <h2 class="station-header">🎻 Ludwig van Beethoven</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=E5oxdN_qT0c" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Missa solemnis in D major, Op. 123</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_k6LkDUW0ewKU3R37jHMIpi79U1KLpCxDg" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Missa Solemnis, Op. 123 (Playlist)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=rOjHhS5MtvA" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Symphony No. 9</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=q_kw904K2bw" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Symphony No. 5 'Fate'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=-LzmsGVvqJ8" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Symphony No. 3 'Eroica'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=VCMyFAOa5Fs" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Symphony No. 6 'Pastorale'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Bw9qnZkhGtk" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Symphony No. 4</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=hb0BaqptoLo" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Violin Concerto</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLO6zBTEo45QhwK0K1NWmIDesKrduHficv" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Late String Quartets</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLT3vaRJAzsTyZwMKMZpopBe71IVWBRprZ" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Razumovsky Quartets</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLxV6VwFCe969JE8uCu00ck3QlcRgWu4cV" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Complete String Quartets</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=FUob2dcQTWA" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">String Quartet Op. 132 in A Minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=oYLyfaRxh9o" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Piano Concerto No. 5</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=t8stIcQP3HU" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">Piano Concertos</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=rTo2T_rR3mg" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">All 32 Piano Sonatas</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=6x3YJNZkIuc" target="_blank" rel="noopener noreferrer" class="youtube-number">16</a>
+        <span class="track-name">Adagios</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Mozart -->
+<div class="station">
+  <h2 class="station-header">🎻 W.A. Mozart</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=MafAZeag1_0" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Lacrimosa</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Dp2SJN4UiE4" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Requiem in D minor, K. 626</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_lsrYO2Lok_DzciIn1ld7ftvCF9aUlNaAw" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Requiem in D minor (Playlist)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Ez0kqVShFEs" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Great Mass in C minor, K. 427</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=98lb6cVWMyE" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Mozart & the Clarinet</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=FHwmL8Md22w" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Piano Concertos Nos. 1–9</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ZntL9Y7vcDM" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Piano Concertos Nos. 11–19</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=jvRhkZLM__E" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Piano Concertos Nos. 20–27</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5CPKcHop0fI" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Complete Piano Concertos</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Wcgd1oCbW4g" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Complete Piano Sonatas</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=z1m_YoGbDt4" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Violin Concertos</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=I2QrIIkk9DE&list=PLFpllkY6JbXwsUrxqxQe-Z1IItHDEJO3c&index=1" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">String Quartet No. 1 in G, K. 80</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=o4vwBGdG-fw&list=PLX44B_gQAreyuPAaGEaC-wowlL57mqQwr" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">String Quintet No. 3 in C Major, K. 515</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLyM_KbdkMaEwM61ybUaASOAnNOYo6vpEt" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">Symphonies Nos. 39, 40, 41</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=7Tx5HsmNEpQ" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">Complete Symphonies Vol. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=-cmdtGUtVhs" target="_blank" rel="noopener noreferrer" class="youtube-number">16</a>
+        <span class="track-name">Complete Symphonies Vol. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=sjTLIW-qx_A" target="_blank" rel="noopener noreferrer" class="youtube-number">17</a>
+        <span class="track-name">Complete Symphonies (Selection)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=_gWYFoqqAAo" target="_blank" rel="noopener noreferrer" class="youtube-number">18</a>
+        <span class="track-name">Salzburg Symphonies</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=H9eIAszO5qk" target="_blank" rel="noopener noreferrer" class="youtube-number">19</a>
+        <span class="track-name">The Great Symphonies</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=bJO5f-ovxfE" target="_blank" rel="noopener noreferrer" class="youtube-number">20</a>
+        <span class="track-name">Complete Divertimenti & Serenades</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Schubert -->
+<div class="station">
+  <h2 class="station-header">🎻 Franz Schubert</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=y1Fqx0W7ZN0" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Symphony No. 5 in B♭ major, D. 485</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=_JCp3MycnG8" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Symphony No. 8 'Unfinished'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=dVDQsWMApCU" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Symphony in C major 'The Great'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=CSdlrvC08lM" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">String Quartet No. 14 in D minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PL_qM1lclHDwWsKvE0cREeVYTGEHnzmCXO" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Complete String Quartets</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+  
+  </section>
+
+
+
+<!-- Romantic -->
+
+<section class="section">
+  <h3>Romantic</h3>
+
+  <!-- Georges Bizet -->
+  <div class="station">
+    <h2 class="station-header">🎻 Georges Bizet</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=hJ303yfd5VU" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+  <span class="track-name">'Au Fond Du Temple Saint', Les Pêcheurs de Perles</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=puKN0cmpLCk" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+  <span class="track-name">Les Pêcheurs de Perles</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=J6-4_Itzq2w" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+  <span class="track-name">Carmen, Full Opera</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=EseMHr6VEM0" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+  <span class="track-name">'Habanera', Carmen (Maria Callas)</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=ppKceeQIE2M" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+  <span class="track-name">Les Toréadors. Allegro giocoso (Introduction to Act I)</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=mSl2fL7OfC0" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+  <span class="track-name">Prélude, Carmen</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=Q4qfGJt6I3g" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+  <span class="track-name">'Votre Toast Toreador', Carmen</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=_UBiGasaDY4" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+  <span class="track-name">'The Flower Song', Carmen</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/playlist?list=PLBgagen1f2__ptNBJzuyBuNDePU4CojCk" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+  <span class="track-name">Carmen Suite / Jeux d'Enfants / L'Arlésienne Suites</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/playlist?list=PLBgagen1f2_-d0B6LJgZ23TeqfV-BNak4" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+  <span class="track-name">L'Arlésienne Suites Nos. 1 & 2 / Carmen Suites</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=EOiiC1Yf9uE" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+  <span class="track-name">Symphony in C major</span>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Alexander Borodin -->
+  <div class="station">
+    <h2 class="station-header">🎻 Alexander Borodin</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+      <div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=2xsvzpyNVsQ" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+  <span class="track-name">Tales of Love, War & Redemption</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=wqnnAroUWuM" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+  <span class="track-name">Nocturne, Hauser</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=4kxXxUf1E6s" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+  <span class="track-name">In the Steppes of Central Asia</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=y2nCOxGYeC0" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+  <span class="track-name">Symphony No. 2</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=UiMv7-8WM7U" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+  <span class="track-name">Symphony No. 1</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=fMxCDKl7pCY" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+  <span class="track-name">Symphony No. 3</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/playlist?list=OLAK5uy_kcbk4La8j4kxA2vFiirI5qieBsPsGnzAw" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+  <span class="track-name">String Quartets Nos. 1 & 2</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=kqKclPhsK0o" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+  <span class="track-name">Prince Igor: Polovtsian Dances</span>
+</div>
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=un1rtMjtYzM" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+  <span class="track-name">Prince Igor, Part 1</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=ys_4mIyktW0" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+  <span class="track-name">Prince Igor, Part 2</span>
+</div>
+     
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!-- Johannes Brahms -->
+  <div class="station">
+    <h2 class="station-header">🎻 Johannes Brahms</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+
+        <div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=-K1G8PgDfCI" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+  <span class="track-name">Wie lieblich sind deine Wohnungen, Ein deutsches Requiem</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=ZXU9vqVdudM" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+  <span class="track-name">Ein deutsches Requiem</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=oUWKdARd-24" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+  <span class="track-name">Symphony No. 4</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=VR49WCES28A" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+  <span class="track-name">Symphony No. 3 – Third movement</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=Idlp36Vrwo8" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+  <span class="track-name">Symphony No. 3</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=51xDbdUFc8o" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+  <span class="track-name">Symphony No. 1</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=EDYauTx76yI" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+  <span class="track-name">Symphony No. 2</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=5OjLKhmzQTA" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+  <span class="track-name">Double Concerto</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=7kv_B9KDQ9o" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+  <span class="track-name">Violin Concerto in D Major</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=c5D9FbG71eE" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+  <span class="track-name">String Sextet, Op. 18</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=QzmxzxdigGw" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+  <span class="track-name">Klarinettenquintett op. 115</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=mP5vWqmiWfU" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+  <span class="track-name">Clarinet Trio in A minor</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=HJJdpxtqNU0" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+  <span class="track-name">Piano Quintet in F minor, Op. 3</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=mNcQGsF2uIw" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+  <span class="track-name">Piano Concerto No. 1</span>
+</div>
+
+<div class="playlist-item">
+  <a href="https://www.youtube.com/watch?v=VghJWGQ2IU0" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+  <span class="track-name">Piano Concerto No. 2 in B-flat major</span>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+ 
+ <!-- Frédéric Chopin -->
+<div class="station">
+  <h2 class="station-header">🎻 Frédéric Chopin</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=IVpuTD-2SEo" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a><span class="track-name">Complete Nocturnes</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/playlist?list=PL1xy1ezAZ9qwOkv3AJPiDOoYMsC0lEt3b" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a><span class="track-name">12 Études, Opp. 10 & 25</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=9HinHSUrZ7o" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a><span class="track-name">Polonaises</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=H5D46aHhRDM" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a><span class="track-name">Complete Mazurkas</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=g_FirjPIej0" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a><span class="track-name">The Complete Chopin Preludes</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=cq8ffOhcLqU" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a><span class="track-name">Piano Concerto No. 1, Op 11</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=f38YNMAwYmU" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a><span class="track-name">Piano Concerto No. 2</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=mIVbcWKxn5k&pp=ygUXY2hvcGluIHBpYW5vIGNvbmNlcnRvIDE%3D" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a><span class="track-name">Piano Concertos Nos. 1 & 2</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=qb0Ebqe9JJo" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a><span class="track-name">4 Ballades</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/playlist?list=OLAK5uy_k28PANayjw1GDL914DxXuPOwlTWARXD78" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a><span class="track-name">Scherzos Nos. 1–4</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Antonín Dvořák -->
+<div class="station">
+  <h2 class="station-header">🎻 Antonín Dvořák</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=khatbX3YTXQ" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a><span class="track-name">Cello Concerto, Op. 104</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=GOPsXJoatEI" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a><span class="track-name">Serenade for Strings</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=eFMV63zy-Xk" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a><span class="track-name">Piano Quintet No. 2, Op. 81</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=QXAv-NGppFw" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a><span class="track-name">Symphony No. 8</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=P_1N6_O254g" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a><span class="track-name">Symphony No. 9 “From the New World”</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=ODkuJGadv7k" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a><span class="track-name">Symphony No. 7 in D minor, Op. 70</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=a1Ftozpnfqc" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a><span class="track-name">Stabat Mater</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=0p0_ysPTaHw" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a><span class="track-name">Slavonic Dances, Op. 72</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=AEJAzC-0Tbg" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a><span class="track-name">Symphonic Variations, Op. 78</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/playlist?list=OLAK5uy_nDH0kgcJVF_GzmRskoEOIwettXgQwhPJU" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a><span class="track-name">Rusalka – Highlights</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Edward Elgar -->
+<div class="station">
+  <h2 class="station-header">🎻 Edward Elgar</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+      <div class="playlist-item"><a href="https://www.youtube.com/playlist?list=OLAK5uy_nCCcWxaWM0FGh9fbM2GIU5MLIO4tz4c1E" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a><span class="track-name">Enigma Variations</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=gdz3__20PbI" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a><span class="track-name">Enigma Theme / Nimrod / Salut d’Amour / etc.</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=7Gkalm4jE4o" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a><span class="track-name">Serenade for Strings, Op. 20</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=hTlWUOllZsA" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a><span class="track-name">Cello Concerto</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=Q00-NEE-eiQ" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a><span class="track-name">Cockaigne Overture</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=YkPMm9VMGHI" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a><span class="track-name">In the South</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=sFuJjVru75A" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a><span class="track-name">Sea Pictures</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=u5xT1ytn49Q" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a><span class="track-name">Spirit of England</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=Irhzcsqr1rE" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a><span class="track-name">Symphony No. 1</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=WlrqrMPPg_o" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a><span class="track-name">Symphony No. 2</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/playlist?list=OLAK5uy_nCCCV56atGmYttNnFL-9gLed05skgzx_0" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a><span class="track-name">String Quartet & Piano Quintet</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=QVfaAz1BAhs" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a><span class="track-name">Violin Concerto</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=9qfsBgMK7s0" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a><span class="track-name">Complete Original Organ Music</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=lIRI1gD4-I0" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a><span class="track-name">Pomp & Circumstance Marches</span></div>
+      <div class="playlist-item"><a href="https://www.youtube.com/watch?v=JSWpO9l4ofg" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a><span class="track-name">Pomp & Circumstance Highlights</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Edvard Grieg -->
+<div class="station">
+  <h2 class="station-header">🎻 Edvard Grieg</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Geh_JOVR8ak" target="_blank" class="youtube-number">1</a>
+        <span class="track-name">Norwegische Tänze</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=pAFw4vjgVgU" target="_blank" class="youtube-number">2</a>
+        <span class="track-name">Peer Gynt</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=yqZ-UzPtwsU" target="_blank" class="youtube-number">3</a>
+        <span class="track-name">Violin Sonata No. 3 in C Minor, Op. 45</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Iwb4pLhPiYU" target="_blank" class="youtube-number">4</a>
+        <span class="track-name">The Complete Violin Sonatas</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=PbYsytZ92eY" target="_blank" class="youtube-number">5</a>
+        <span class="track-name">Cello Sonata</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=xTYF8tXuUuU" target="_blank" class="youtube-number">6</a>
+        <span class="track-name">Holberg Suite</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=pZtKXXrm-Xs" target="_blank" class="youtube-number">7</a>
+        <span class="track-name">Piano Concerto</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_nBdFJwYtlqTA5YXWsllgp3C_khjcesqh0" target="_blank" class="youtube-number">8</a>
+        <span class="track-name">Lyric Pieces</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Franz Liszt -->
+<div class="station">
+  <h2 class="station-header">🎻 Franz Liszt</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=36SDx8bue08" target="_blank" class="youtube-number">1</a>
+        <span class="track-name">Piano Sonata in B Minor, S. 178</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mWN8py1Dww6muuZltzrQ6cuO2U63ZW0jM" target="_blank" class="youtube-number">2</a>
+        <span class="track-name">Années de Pèlerinage</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=zWEmuah_e64" target="_blank" class="youtube-number">3</a>
+        <span class="track-name">Hungarian Rhapsody No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=xRKT8BuMmqY" target="_blank" class="youtube-number">4</a>
+        <span class="track-name">Complete Hungarian Rhapsodies</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=4in7bcj327E" target="_blank" class="youtube-number">5</a>
+        <span class="track-name">12 Transcendental Études S.139</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=flXQsrFAoy0" target="_blank" class="youtube-number">6</a>
+        <span class="track-name">A Faust Symphony</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=v5l8y0vnjKo" target="_blank" class="youtube-number">7</a>
+        <span class="track-name">Liebestraum No. 3 (1 Hour Loop)</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Giacomo Puccini -->
+<div class="station">
+  <h2 class="station-header">🎻 Giacomo Puccini</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=eDEc4fiarTc" target="_blank" class="youtube-number">1</a>
+        <span class="track-name">Madame Butterfly (1995)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=fppXnp8_Q4Y" target="_blank" class="youtube-number">2</a>
+        <span class="track-name">Un bel di, vedremo</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Mq9kB71yDs0" target="_blank" class="youtube-number">3</a>
+        <span class="track-name">Turandot (1998)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=cWc7vYjgnTs" target="_blank" class="youtube-number">4</a>
+        <span class="track-name">Nessun Dorma (Pavarotti)</span>
+      </div>
+
+     </div>
+    </div>
+  </div>
+  
+  
+  <!-- Camille Saint-Saëns -->
+<div class="station">
+  <h2 class="station-header">🎻 Camille Saint-Saëns</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Bi5CPm96rCE" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Symphony No. 3</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=hSVdg2q1oB0" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Cello Concerto No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=pfBkzWNQTpI" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Cellokonzert No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_kJr0gNVMORmnQatkEv_8kdJVj0K9FybW0" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Piano Concerto No. 1 / Wedding Cake / Rhapsodie d'Auvergne / Africa</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=1IEYtta_ZsI" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Piano Concerto No. 5</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=sKKVsakOwhc" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Violin Concerto No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=W6ERiQFu1GU" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Violin Concerto No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=VrpxJmzLSWg" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Violin Concerto No. 3</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=UmoZNL-LBKA" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Carnival of the Animals</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Sqcyu_bAttc" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Piano Concertos No. 1–5</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=JAdj0pGFO7w" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Mélodie sans paroles</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=HIc_fMQf-w4" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">Complete Sonatas</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLk-IgAEKYl2w64vllOGKemBlOUTLyNSuI" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Complete Symphonies</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Bedřich Smetana -->
+<div class="station">
+  <h2 class="station-header">🎻 Bedřich Smetana</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=w6jlhLUgER0" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Má Vlast</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ZWW0dXCpTuA" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">String Quartet No. 1 "From My Life"</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=FZ97LtMnyy4" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Smetana Collection</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=fQhC0EfLFBo" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">String Quartet No. 2</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Johann Strauss II -->
+<div class="station">
+  <h2 class="station-header">🎻 Johann Strauss II</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=NI3fTby-dko" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Waltzes, Polkas & Operettas</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=fHzhDKwYP2s" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">The Blue Danube</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=mz5toUbpBg0" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Emperor Waltz</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_luvrkDgBdvD4xW9G2OEC-QljgBrY6ikME" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Die Fledermaus Highlights</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Pyotr Ilyich Tchaikovsky -->
+<div class="station">
+  <h2 class="station-header">🎻 Pyotr Ilyich Tchaikovsky</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=_591VkMY4iQ" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Variations on a Rococo Theme</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=M2ZU-1EyVOw" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Serenade for Strings</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=8MBT3ncnnmY" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Piano Concerto No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=nw5pn2QXyGQ" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Piano Concerto No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=2CtUNOW6Xtk" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Violin Concerto</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=6UgGY-nEoVU" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Symphony No. 1 "Winter Dreams"</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=t4WRFBMqkDY" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Symphony No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=VMTBLuMzvs0" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Symphony No. 4</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=JUk0WZVCnk4" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Symphony No. 5</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=qVA1ieo9Js4" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Symphony No. 6 "Pathétique"</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=FUWxEpAEGyI" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Manfred Symphony</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=DgqmA7Bf3DM" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">Romeo and Juliet Overture</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5IdMBC10F0c" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Hamlet Overture</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=3AhZDsY44pc" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">Francesca da Rimini</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=pgXrrFt-Uzs" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">1812 Overture</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=F2d_vv2w--8" target="_blank" rel="noopener noreferrer" class="youtube-number">16</a>
+        <span class="track-name">Swan Lake</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=4cc1cZvFBzs" target="_blank" rel="noopener noreferrer" class="youtube-number">17</a>
+        <span class="track-name">The Nutcracker</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=MuHQEtKZT2U" target="_blank" rel="noopener noreferrer" class="youtube-number">18</a>
+        <span class="track-name">The Sleeping Beauty Suite</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+  
+
+</section>
+
+
+
+<!-- Early Modern -->
+
+<section class="section">
+<h3>Early Modern</h3>
+
+<!-- Claude Debussy -->
+<div class="station">
+  <h2 class="station-header">🎻 Claude Debussy</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=jp-C3Lbgo5M" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Images pour orchestre</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=8ULp_nBSVQ4" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Images & Preludes</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=IGM1T0t7qts" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Piano Solo</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ZzEl_4SutlU" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Violin Sonata</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5PtUysEIksI" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Violin Sonata / Cello Sonata / Piano Trio</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=jlLoXvamfZw" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Prélude à l'après-midi d'un faune</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=A12T7kra0Eo" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">La Mer</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=gEXj9ZaDxlc" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Nocturnes: Nuages, Fêtes & Sirènes</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=7JbQh5gU_Pw" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Jeux</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=nT5ivdEon18" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Printemps</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=hcv-7uaedoA" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Khamma</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=oG8T8twoVhg" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">Le Martyre de Saint Sébastien</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Gustav Holst -->
+<div class="station">
+  <h2 class="station-header">🎻 Gustav Holst</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=HP5xhyPn58U" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Die Planeten</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=NlSzJfxwIfg" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">The Planets, Op. 32 (Complete)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Nz0b4STz1lo" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Jupiter, the Bringer of Jollity</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=1tFrtpySNvU" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">The Perfect Fool, Op. 39: Ballet Music</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_nPsILvL7746MA93IVKrRySTdaQhkVpxCQ" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">The Wandering Scholar, Suite de Ballet & A Song of the Night</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=1QOAU8KMXGQ" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">A Somerset Rhapsody, Op. 21 No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=zxjJkP8oVYY" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Brook Green Suite</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=VgiqnBx2WkQ" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Egdon Heath, Op. 47</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLBwITy7b7jVL3SBJ-0zcplQ136JEQojiL" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Cotswold Symphony</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=r8N5s8V_auE" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Japanese Suite</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=d1jg94zWGoE" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">The Cloud Messenger, Op. 30</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=-091E5w0PyY" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">Indra, Op. 13</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=2p8VgzEujGo" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Choral Hymns from the Rig Veda, Op. 26</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5meFq1hxfDI" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">Savitri, Op. 25</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=G7RRA2n_-go" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">Nunc Dimittis</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5Sxbj1AKrj8" target="_blank" rel="noopener noreferrer" class="youtube-number">16</a>
+        <span class="track-name">St. Paul's Suite</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=QJH256rumkk" target="_blank" rel="noopener noreferrer" class="youtube-number">17</a>
+        <span class="track-name">The Hymn of Jesus, Op. 37</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Sergei Prokofiev -->
+<div class="station">
+  <h2 class="station-header">🎻 Sergei Prokofiev</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=hl5MwiDI3Ms" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Symphony-Concerto Op. 125</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ChS5RsStWcE" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Violin Concerto No. 1 in D major, Op. 19</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=p7ams5Bmhak" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Violin Concerto No. 2 in G minor, Op. 63</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=lWNiR1BuenY" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Cello Sonata</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=MP66Sw7Q1so" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Piano Concerto No. 5, Op. 55</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=guLUZVl6tvs" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Piano Concerto No. 3</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=dmUUAOiQKKU" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Piano Concerto No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=yvY5nhskW3w" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Complete Piano Sonatas</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Sr5cTdGMl9A" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Alexander Nevsky</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=u9wWedSZBfE" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Alexander Nevsky (1938 Film, Restored Score)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=YbaY7p5ahZo" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Lieutenant Kijé Suite, Op. 60</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=QMQfDBYvbe0" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">War and Peace – Suite from the Opera, Op. 91</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=fO4aZzS7jn4" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Peter and the Wolf</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=UzDw_WHk7Qo" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">Dance of the Knights (Romeo & Juliet)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=AZwCi2GdBkU" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">Romeo & Juliet Suite No. 2, Op. 64c</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Sergei Rachmaninoff -->
+<div class="station">
+  <h2 class="station-header">🎻 Sergei Rachmaninoff</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=l7GQcOGb6Mc&list=PLbUzlEcPnofWFpAZsBipIPqD0PCQmQi4k&index=3" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Piano Concerto No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=dvYYXHpEcGE" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Piano Concerto No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=PQyErbTpSN0" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Piano Concerto No. 3</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5yfedYcKdJ8" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Piano Concerto No. 4, Op. 40</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=k8ucSWeBcr8" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Complete Preludes & Etudes-Tableaux</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=KkcJBjuCuPY" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Sonata for Cello and Piano</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Zr-ifrS5Qq4" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Symphony No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=QBy_ACHvEJs" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Symphony No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=gbcxikpA3h4" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Symphony No. 3</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=otJmf3pyb1E" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Symphonic Dances, Op. 45</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=QSxFYwlF7CQ&list=PLbUzlEcPnofWFpAZsBipIPqD0PCQmQi4k&index=7" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Rhapsody on a Theme of Paganini</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=q25aNiSGzno" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">All-Night Vigil (Vespers), Op. 37</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=F_x1S_q9pHI" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">The Bells, Op. 35</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Erik Satie -->
+<div class="station">
+  <h2 class="station-header">🎻 Erik Satie</h2>
+
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5pyhBJzuixM" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Gymnopédies, Gnossiennes & Sarabandes
+</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=_VGNw9W70yA" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Gymnopédies & Gnossiennes</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=nfhza_GLKNg" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Gnossiennes No. 1–7 (Complete)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=D3M7NSVSMXA" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Pièces Froides</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=yc9ya6ZVGPc" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Nocturnes</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=DkGdSINdCh0" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Ogives</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Jean Sibelius -->
+<div class="station">
+  <h2 class="station-header">🎻 Jean Sibelius</h2>
+
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=YsbrRAgv1b4" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Violin Concerto</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=tMnHbLPJHx8" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">Four Humoresques, Op. 89 No. 2 in G minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=5yl_xyc4MT4" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Complete Symphonies Nos. 1–7</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=ACqPJ1CRQ3k" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Symphony No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Z6iNaFWV3tc" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Symphony No. 2</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=wg5-lNMgq6c" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Symphony No. 3</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=HjeF99_ocfM" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Symphony No. 4</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=RRS6dIgn_QI" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">Symphony No. 5</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=SIcjeoRLcoEs7" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Symphony No. 6 (Salonen)</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Bi9QiDrJJmw" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Symphony No. 7</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=gkX-Uc0e3TQ" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Tapiola</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=qDUGtJslRIs" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">Finlandia</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=rZ3vNr4EscQ" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Kullervo Symphony / The Origin of Fire / Our Native Land</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=C_18IKw9KFc" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">Finlandia / Karelia Suite / Valse Triste</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Bi4OnSPc3Yc" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">Valse triste, Op. 44 No. 1</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=fXt6eYXDHHE" target="_blank" rel="noopener noreferrer" class="youtube-number">16</a>
+        <span class="track-name">Piano Music</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Igor Stravinsky -->
+<div class="station">
+  <h2 class="station-header">🎻 Igor Stravinsky</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=xCf9YXEvHHA&pp=ygUgdGhlIGZpcmViaXJkIHN0cmF2aW5za3kgY29tcGxldGU%3D" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">The Firebird</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=EkwqPJZe8ms" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">The Rite of Spring</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=esD90diWZds" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Petrushka</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=glbnrYF_0ck" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Pulcinella</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=AEx9NxFJ09Y" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Symphony of Psalms</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=A2IfCGyf0ns" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">The Nightingale</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=xfn8ieMI6V4" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Apollo</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Vaughan Williams -->
+<div class="station">
+  <h2 class="station-header">🎻 Ralph Vaughan Williams</h2>
+  <div class="playlist-wrapper">
+    <div class="playlist">
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=VMsg7cTU-HQ" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+        <span class="track-name">Greensleeves</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=24wbsnjenjs" target="_blank" rel="noopener noreferrer" class="youtube-number">2</a>
+        <span class="track-name">A London Symphony</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=2w4hHS5Ys2U" target="_blank" rel="noopener noreferrer" class="youtube-number">3</a>
+        <span class="track-name">Symphony No. 1 'A Sea Symphony'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PL4D14bmfCxVWvk3whEHcQ7xFTVqOXcmYi" target="_blank" rel="noopener noreferrer" class="youtube-number">4</a>
+        <span class="track-name">Symphonies</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=EcR8KUuca3A" target="_blank" rel="noopener noreferrer" class="youtube-number">5</a>
+        <span class="track-name">Symphony No. 5</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=PLkAUJkbhd-Rg2jeta2BKWY3B716iihfTP" target="_blank" rel="noopener noreferrer" class="youtube-number">6</a>
+        <span class="track-name">Symphony No. 7 "Sinfonia Antartica"</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=_IiQw-ZCskg" target="_blank" rel="noopener noreferrer" class="youtube-number">7</a>
+        <span class="track-name">Norfolk Rhapsody No. 1 in E minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=krNxN5HqFuc" target="_blank" rel="noopener noreferrer" class="youtube-number">8</a>
+        <span class="track-name">The Lark Ascending</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=e6pEIHtffqQ" target="_blank" rel="noopener noreferrer" class="youtube-number">9</a>
+        <span class="track-name">Fantasia on a Theme by Thomas Tallis</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=FBHgrR6Ft04" target="_blank" rel="noopener noreferrer" class="youtube-number">10</a>
+        <span class="track-name">Five Variants of 'Dives and Lazarus'</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_m9YAKWQKy1BXYpCKKcTmj8gyJnU85x6YU" target="_blank" rel="noopener noreferrer" class="youtube-number">11</a>
+        <span class="track-name">Job, A Masque for Dancing & Concerto for Two Pianos</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_nYoEgxwkRE3SgLwxpykUwqyuZvjdzYbsQ" target="_blank" rel="noopener noreferrer" class="youtube-number">12</a>
+        <span class="track-name">Songs of Travel</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=3P0TaRKQPbE" target="_blank" rel="noopener noreferrer" class="youtube-number">13</a>
+        <span class="track-name">Oboe Concerto in A minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=iZEbDUanW-I" target="_blank" rel="noopener noreferrer" class="youtube-number">14</a>
+        <span class="track-name">String Quartet in G minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=dlsGh87dKBc" target="_blank" rel="noopener noreferrer" class="youtube-number">15</a>
+        <span class="track-name">Quintet in D major</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=i9auIdcHDLA" target="_blank" rel="noopener noreferrer" class="youtube-number">16</a>
+        <span class="track-name">Piano Quintet in C minor</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=Ja-fD7zLllQ" target="_blank" rel="noopener noreferrer" class="youtube-number">17</a>
+        <span class="track-name">Serenade to Music</span>
+      </div>
+
+      <div class="playlist-item">
+        <a href="https://www.youtube.com/watch?v=GuSkcK4vHdM" target="_blank" rel="noopener noreferrer" class="youtube-number">18</a>
+        <span class="track-name">The Best of Ralph Vaughan Williams</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- 20th Century -->
+
+<section class="section">
+   <h1>Coming Soon</h1>
+  <h3>20th Century</h3>    
+
+  <!-- Leonard Bernstein -->
+  <div class="station">
+    <h2 class="station-header">🎻 Leonard Bernstein</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benjamin Britten -->
+  <div class="station">
+    <h2 class="station-header">🎻 Benjamin Britten</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aaron Copland -->
+  <div class="station">
+    <h2 class="station-header">🎻 Aaron Copland</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Philip Glass -->
+  <div class="station">
+    <h2 class="station-header">🎻 Philip Glass</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Olivier Messiaen -->
+  <div class="station">
+    <h2 class="station-header">🎻 Olivier Messiaen</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arvo Pärt -->
+  <div class="station">
+    <h2 class="station-header">🎻 Arvo Pärt</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Astor Piazzolla -->
+  <div class="station">
+    <h2 class="station-header">🎻 Astor Piazzolla</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Joaquín Rodrigo -->
+  <div class="station">
+    <h2 class="station-header">🎻 Joaquín Rodrigo</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <div class="playlist-item">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="youtube-number">1</a>
+          <span class="track-name"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Contemporary -->
+
+<section class="section">
+  <h1>Coming Soon</h1>
+  <h3>🎬 Contemporary</h3>
+
+  <div class="station">
+    <h2 class="station-header">🎻 Ludovico Einaudi</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <a href="#" target="_blank" class="youtube-number">1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="station">
+    <h2 class="station-header">🎻 Ennio Morricone</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <a href="#" target="_blank" class="youtube-number">1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="station">
+    <h2 class="station-header">🎻 Max Richter</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <a href="#" target="_blank" class="youtube-number">1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="station">
+    <h2 class="station-header">🎻 Vangelis</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <a href="#" target="_blank" class="youtube-number">1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="station">
+    <h2 class="station-header">🎻 John Williams</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <a href="#" target="_blank" class="youtube-number">1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="station">
+    <h2 class="station-header">🎻 Hans Zimmer</h2>
+    <div class="playlist-wrapper">
+      <div class="playlist">
+        <a href="#" target="_blank" class="youtube-number">1</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</div>
+
+<script>
+
+/* =========================
+   COLLAPSIBLE LOGIC
+========================= */
+
+document.querySelectorAll('.station-header').forEach(header => {
+
+  header.addEventListener('click', () => {
+
+    const station = header.parentElement;
+
+    document.querySelectorAll('.station').forEach(item => {
+
+      if(item !== station){
+        item.classList.remove('active');
+      }
+
+    });
+
+    station.classList.toggle('active');
+
+  });
+
+});
+
+/* =========================
+   VISITED STATE
+========================= */
+
+document.querySelectorAll('.youtube-number').forEach(link => {
+
+  link.addEventListener('click', () => {
+    link.classList.add('visited');
+  });
+
+});
+
+</script>
+
+</body>
+</html>
