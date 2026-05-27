@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Miaow Markets</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#404040;
+  --card:#4b4b4b;
+  --text:#ffffff;
+  --muted:#acabab;
+  --accent:#f97803;
+  --border:rgba(255,255,255,0.06);
+  --shadow:rgba(0,0,0,0.35);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--muted);
+  font-family:'Quicksand',sans-serif;
+  line-height:1.7;
+  display:flex;
+  justify-content:center;
+  padding:3rem 1rem 5rem;
+}
+
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:100%;
+  max-width:900px;
+}
+
+/* HERO */
+
+.hero{
+  margin-bottom:3rem;
+  padding:2.4rem 2rem;
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(249,120,3,0.10),
+      rgba(255,255,255,0.02)
+    );
+
+  border:1px solid var(--border);
+
+  box-shadow:
+    0 12px 30px var(--shadow);
+}
+
+.hero h1{
+  color:var(--text);
+  font-size:clamp(2.2rem,5vw,3.5rem);
+  margin-bottom:0.5rem;
+}
+
+.tagline{
+  color:var(--accent);
+  margin-bottom:1.8rem;
+  font-style:italic;
+}
+
+.intro p{
+  margin-bottom:1rem;
+}
+
+/* SECTIONS */
+
+.section{
+  background:var(--card);
+  border-radius:18px;
+  padding:1.6rem;
+  margin-bottom:2rem;
+
+  border:1px solid var(--border);
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.22);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.section:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,0.30);
+
+  border-color:
+    rgba(249,120,3,0.25);
+}
+
+.section h2{
+  color:var(--text);
+  font-size:1.1rem;
+  margin-bottom:1.5rem;
+  letter-spacing:.05em;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.flag{
+  width:36px;
+  height:24px;
+  border-radius:4px;
+}
+
+/* LINKS */
+
+.section ul{
+  list-style:none;
+}
+
+.section li{
+  margin-bottom:.7rem;
+}
+
+.section a{
+  color:var(--text);
+  position:relative;
+  display:inline-block;
+  padding-left:1.2rem;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+.section a::before{
+  content:"›";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+  font-weight:700;
+}
+
+.section a:hover{
+  color:var(--accent);
+  transform:translateX(3px);
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:4rem;
+  text-align:center;
+  color:#8e8e8e;
+  font-size:.85rem;
+}
+
+/* MOBILE */
+
+@media(max-width:640px){
+
+  body{
+    padding:1.5rem .9rem 4rem;
+  }
+
+  .hero{
+    padding:1.8rem 1.4rem;
+  }
+
+  .section{
+    padding:1.3rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <h1>The Miaow Markets</h1>
+
+    <p class="tagline">
+      “Charts before chats.”
+    </p>
+
+    <div class="intro">
+
+      <p>
+        A curated financial dashboard for markets, macroeconomics and global trading.
+      </p>
+
+      <p>
+        Follow indices, currencies, commodities and economic developments from multiple perspectives.
+      </p>
+
+      <p>
+        Built for calm observation, strategic thinking and avoiding financial bollocks.
+      </p>
+
+    </div>
+
+  </header>
+
+ <!-- HOURS -->
+<section class="section">
+  <h3>Trading Hours <br>🥐☕</h3>
+  <ul>
+    <li><a href="https://www.worldtimezone.com/" target="_blank">World Time Zone Map</a></li>
+    <li><a href="https://www.forexmarkethours.com/" target="_blank">Forex Market Hours</a></li>
+  </ul>
+</section>
+
+<!-- CALENDARS -->
+<section class="section">
+  <h3>Economic Calendars <br>📆</h3>
+  <ul>
+    <li><a href="https://www.forexfactory.com/calendar" target="_blank">ForexFactory – Calendar</a></li>
+    <li><a href="https://www.babypips.com/economic-calendar" target="_blank">BabyPips – Calendar</a></li>
+    <li><a href="https://www.myfxbook.com/market-hours" target="_blank">Myfxbook – Calendar</a></li>
+  </ul>
+</section>
+
+<!-- NEWS -->
+<section class="section">
+  <h3>Market News <br>📢</h3>
+  <ul>
+    <li><a href="https://www.myfxbook.com/forex-economic-calendar/interest-rates?region=g20" target="_blank">Myfxbook – 
+      Interest Rates</a></li>
+    <li><a href="https://www.babypips.com/news" target="_blank">BabyPips – Market News</a></li>
+    <li><a href="https://finimize.com/topics/asia" target="_blank">Finimize – Asia Focus</a></li>
+  </ul>
+</section>
+
+<!-- SENTIMENT -->
+<section class="section">
+  <h3>Market Sentiment <br>🚧😨   🏁😼</h3>
+  <ul>
+    <li><a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank">CNN – Fear &amp; Greed Index</a></li>
+    <li><a href="https://www.babypips.com/tools/risk-on-risk-off-meter" target="_blank">BabyPips – Risk-On/Risk-Off</a></li>
+  </ul>
+</section>
+
+<!-- US EQUITY HEATMAPS -->
+<section class="section">
+  <h3>US Equity Heat Maps <br>❄️🥶   🔥🥵</h3>
+  <ul>
+    <li><a href="https://finance.yahoo.com/sectors/" target="_blank">YahooFinance – 
+      Sectors</a></li>
+    <li><a href="https://finviz.com/map.ashx?t=sec_all" target="_blank">Finviz – All Stocks</a></li>
+    <li><a href="https://uk.marketscreener.com/quote/index/DOW-JONES-INDUSTRIAL-4945/heatmap/" target="_blank">Dow Jones</a></li>
+    <li><a href="https://uk.marketscreener.com/quote/index/NASDAQ-100-4946/heatmap/" target="_blank">NASDAQ 100</a></li>
+    <li><a href="https://uk.marketscreener.com/quote/index/S-P-500-4985/heatmap/" target="_blank">S&amp;P 500</a></li>
+    <li><a href="https://finviz.com/map.ashx" target="_blank">Finviz – S&amp;P 500</a></li>
+    <li><a href="https://finviz.com/map.ashx?t=geo" target="_blank">Finviz – World Stocks</a></li>
+  </ul>
+</section>
+
+<!-- INDICES -->
+<section class="section">
+  <h3>Global Indices <br>🌎🌍🌏</h3>
+  <ul>
+    <li><a href="https://markets.businessinsider.com/indices" target="_blank">BusinessInsider</a></li>
+    <li><a href="https://uk.marketscreener.com/stock-exchange/indexes/" target="_blank">MarketScreener</a></li>
+    <li><a href="https://uk.marketscreener.com/quote/index/FTSE-100-7392/" target="_blank">MarketScreener – 
+      Symbol</a></li>
+    <li><a href="https://marketmilk.babypips.com/symbols/US30/overview" target="_blank">MarketMilk – 
+      Symbol</a></li>
+    <li><a href="https://finance.yahoo.com/markets/world-indices/" target="_blank">YahooFinance</a></li>
+  </ul>
+</section>
+
+<!-- FX -->
+<section class="section">
+  <h3>Forex <br>🗽💂‍♂️</h3>
+  <ul>
+    <li><a href="https://www.tradingview.com/markets/currencies/cross-rates-overview-prices/" target="_blank">TradingView – FX Heat Map</a></li>
+    <li><a href="https://marketmilk.babypips.com/" target="_blank">MarketMilk – FX Snapshot</a></li>
+    <li><a href="https://www.myfxbook.com/community/outlook" target="_blank">Myfxbook – FX Sentiment</a></li>
+    <li><a href="https://www.myfxbook.com/forex-market/currencies" target="_blank">Myfxbook – Daily Range</a></li>
+    <li><a href="https://finviz.com/forex.ashx" target="_blank">Finviz – FX Charts 5m</a></li>
+    <li><a href="https://finviz.com/forex_charts.ashx" target="_blank">Finviz – FX Charts 1m</a></li>
+    <li><a href="https://uk.marketscreener.com/stock-exchange/currencies/" target="_blank">MarketScreener – Multi Chart</a></li>
+    <li><a href="https://www.forexfactory.com/market/eurusd" target="_blank">ForexFactory – Symbol Panel</a></li>
+    <li><a href="https://marketmilk.babypips.com/symbols/USDJPY/overview" target="_blank">MarketMilk – FX Symbol</a></li>
+    <li><a href="https://www.xe.com/currencycharts/?from=USD&to=JPY" target="_blank">XE – FX Symbol</a></li>
+    <li><a href="https://www.babypips.com/tools/currency-correlation" target="_blank">BabyPips – Correlations</a></li>
+    <li><a href="https://www.mataf.net/en" target="_blank">Mataf –Volatility</a></li>
+  </ul>
+</section>
+
+  <!-- ===================== COMMODITIES (EX OIL) ===================== -->
+<section class="section">
+
+  <h3>Commodities <br>🥇🍫</h3>
+
+  <ul>
+        <li><a href="https://tradingeconomics.com/commodities" target="_blank">TradingEconomics – Commodities Overview</a></li>
+    <li><a href="https://www.barchart.com/futures/major-commodities" target="_blank">Barchart – Commodities Prices</a></li>
+      <li><a href="https://currency.world/exchange_rates/XAU" target="_blank">CurrencyWorld – Gold (XAU)</a></li>
+      <li><a href="https://tradingeconomics.com/commodity/gold" target="_blank">TradingEconomics – Gold</a></li>
+       <li><a href="https://tradingeconomics.com/commodity/cocoa" target="_blank">TradingEconomics – Cocoa</a></li>
+  </ul>
+</section>
+
+  <footer>
+    The Miaow Markets © 2026 • Great Returns Zero Effort 🍸😼🐾
+  </footer>
+
+</div>
+
+</body>
+</html>
