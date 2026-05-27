@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crude 'Fish' Oil</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+ROOT
+========================================= */
+
+:root{
+
+  --bg:#404040;
+  --card:#4a4a4a;
+  --soft:#3b3b3b;
+
+  --text:#d8d8d8;
+  --muted:#b8b8b8;
+  --white:#ffffff;
+
+  --blue:#0683CB;
+  --orange:#f97803;
+
+  --line:rgba(255,255,255,.08);
+
+  --radius:16px;
+  --radius-sm:10px;
+
+  --shadow:
+    0 10px 24px rgba(0,0,0,.25);
+
+}
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Quicksand',sans-serif;
+  line-height:1.55;
+  padding:2rem 1rem 5rem;
+}
+
+/* =========================================
+LAYOUT
+========================================= */
+
+.container{
+  width:100%;
+  max-width:980px;
+  margin:auto;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(249,120,3,.12),
+      rgba(255,255,255,.02)
+    );
+
+  border:1px solid rgba(255,255,255,.06);
+
+  border-left:5px solid var(--orange);
+
+  border-radius:22px;
+
+  padding:2.3rem 2rem;
+
+  margin-bottom:2rem;
+
+  box-shadow:var(--shadow);
+}
+
+.hero h1{
+  color:var(--white);
+  font-size:clamp(2.2rem,5vw,3.6rem);
+  margin-bottom:.5rem;
+}
+
+.tagline{
+  color:var(--orange);
+  font-style:italic;
+  margin-bottom:1.6rem;
+}
+
+.hero p{
+  color:var(--muted);
+  margin-bottom:1rem;
+}
+
+/* =========================================
+SECTIONS
+========================================= */
+
+.section{
+  background:var(--card);
+
+  border-radius:var(--radius);
+
+  padding:1.2rem;
+
+  margin-bottom:1.2rem;
+
+  box-shadow:var(--shadow);
+
+  border:1px solid rgba(255,255,255,.05);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.section:hover{
+  transform:translateY(-2px);
+
+  border-color:
+    rgba(249,120,3,.18);
+}
+
+/* =========================================
+HEADINGS
+========================================= */
+
+.section h2,
+.section h3{
+  color:var(--white);
+
+  font-size:1.05rem;
+
+  margin-bottom:.9rem;
+
+  letter-spacing:.03em;
+}
+
+.panel-title{
+  color:#c28d57;
+  font-size:.9rem;
+  margin-bottom:.8rem;
+  font-weight:700;
+}
+
+/* =========================================
+LABELS
+========================================= */
+
+.label{
+  display:inline-block;
+
+  padding:.3rem .6rem;
+
+  border-radius:6px;
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  color:#111;
+
+  margin-bottom:.9rem;
+}
+
+.blue-back{background:var(--blue);}
+.orange-back{background:var(--orange);}
+.white-back{background:var(--white);}
+
+/* =========================================
+BOXES
+========================================= */
+
+.loop{
+  background:var(--soft);
+
+  border-radius:10px;
+
+  padding:1rem;
+}
+
+.blue-side{
+  border-left:4px solid var(--blue);
+}
+
+.orange-side{
+  border-left:4px solid var(--orange);
+}
+
+.white-side{
+  border-left:4px solid var(--white);
+}
+
+/* =========================================
+TABLES
+========================================= */
+
+.table-wrap{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,
+td{
+  padding:.75rem .55rem;
+
+  border-bottom:
+    1px solid var(--line);
+
+  text-align:left;
+  vertical-align:top;
+
+  font-size:.85rem;
+}
+
+th{
+  color:var(--white);
+}
+
+td{
+  color:var(--muted);
+}
+
+tr:last-child td{
+  border-bottom:none;
+}
+
+/* =========================================
+RULES
+========================================= */
+
+.rule{
+  padding:.55rem 0;
+
+  border-bottom:
+    1px solid var(--line);
+
+  font-size:.85rem;
+}
+
+.rule:last-child{
+  border-bottom:none;
+}
+
+.rule strong{
+  color:var(--white);
+}
+
+/* =========================================
+LINKS
+========================================= */
+
+a{
+  color:var(--blue);
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  transition:
+    color .2s ease;
+}
+
+a:hover{
+  color:var(--white);
+}
+
+/* =========================================
+COLLAPSIBLE
+========================================= */
+
+.card-toggle{
+
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  background:none;
+  border:none;
+
+  color:var(--white);
+
+  font:inherit;
+  font-size:1rem;
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+.card-toggle::after{
+  content:"+";
+  font-size:1.2rem;
+}
+
+.collapsible.open .card-toggle::after{
+  content:"−";
+}
+
+.card-content{
+  display:none;
+  padding-top:1rem;
+}
+
+.collapsible.open .card-content{
+  display:block;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+  margin-top:4rem;
+
+  text-align:center;
+
+  color:#8f8f8f;
+
+  font-size:.82rem;
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:640px){
+
+  body{
+    padding:1.3rem .8rem 4rem;
+  }
+
+  .hero{
+    padding:1.7rem 1.3rem;
+  }
+
+  .section{
+    padding:1rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- ===============================
+    NEWS & DATA 
+    =============================== -->
+
+
+<div class="wix-wrapper">
+    
+
+<section class="section hero-card">
+
+<h3>🛢️ News & Data</h3>
+
+<div class="panel-title">
+Links for monitoring oil market behaviour
+</div>
+
+</section>
+
+
+
+<!-- ===============================
+SIGNAL POSITION
+=============================== -->
+<section class="section collapsible">
+<button class="card-toggle">Quick Reference</button>
+<div class="card-content">
+
+<span class="label blue-back"> News & Data</span>
+
+<div class="loop blue-side">
+
+<div class="panel-title">Escalation</div>
+<p class="small">Signals move into headline territory</p>
+
+<div class="panel-title">Containment</div>
+<p class="small">Signals remain embedded in wording</p>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- ===============================
+GULF HEADLINES
+=============================== -->
+
+<section class="section collapsible">
+<button class="card-toggle">Gulf Headlines</button>
+<div class="card-content">
+
+<span class="label blue-back">News & Data</span>
+
+<div class="loop blue-side">
+
+<table>
+<tr>
+<th>Region</th>
+<th>Primary Source</th>
+<th>Use</th>
+</tr>
+
+<tr><td>Market</td><td><a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">✓ Trading Economics</a></td><td>Price & Macro</td></tr>
+<tr><td>Market</td><td><a href="https://oilprice.com/" target="_blank">✓ OilPrice</a></td><td>Energy Headlines</td></tr>
+<tr><td>Market</td><td><a href="https://www.reuters.com/business/energy/" target="_blank">✓ Reuters Energy</a></td><td>Fast Reaction</td></tr>
+<tr><td>Regional</td><td><a href="https://www.aljazeera.com/" target="_blank">✓ Al Jazeera</a></td><td>Broad MENA Tone</td></tr>
+<tr><td>Regional</td><td><a href="https://www.newarab.com/" target="_blank">✓ The New Arab</a></td><td>Narrative Shifts</td></tr>
+<tr><td>Israel</td><td><a href="https://www.timesofisrael.com/" target="_blank">✓ Times of Israel</a></td><td>Security Risk</td></tr>
+<tr><td>Israel</td><td><a href="https://www.haaretz.com/" target="_blank">✓ Haaretz</a></td><td>Political Depth</td></tr>
+<tr><td>Saudi</td><td><a href="https://www.arabnews.com/" target="_blank">✓ Arab News</a></td><td>Policy Tone</td></tr>
+<tr><td>Saudi</td><td><a href="https://english.aawsat.com/" target="_blank">✓ Asharq Al-Awsat</a></td><td>Elite Messaging</td></tr>
+<tr><td>Iran</td><td><a href="https://www.tehrantimes.com/" target="_blank">✓ Tehran Times</a></td><td>State Posture</td></tr>
+<tr><td>Iran</td><td><a href="https://en.irna.ir/" target="_blank">✓ IRNA</a></td><td>Official Line</td></tr>
+<tr><td>GCC</td><td><a href="https://www.bna.bh/en/GCCNews.aspx?cms=iQRpheuphYtJ6pyXUGiNqtgVvxZu2DwqyhixtRSu%2b3g%3d" target="_blank">✓ Bahrain News</a></td><td>Regional Coordination</td></tr>
+<tr><td>UAE</td><td><a href="https://www.thenationalnews.com/" target="_blank">✓ The National</a></td><td>Pragmatic Flow</td></tr>
+<tr><td>Oman</td><td><a href="https://www.omanobserver.om/" target="_blank">✓ Oman Observer</a></td><td>Diplomatic Signals</td></tr>
+<tr><td>Yemen</td><td><a href="https://www.saba.ye/en" target="_blank">✓ SABA News</a></td><td>Disruption Risk</td></tr>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- ===============================
+GLOBAL PLAYERS
+=============================== -->
+<section class="section collapsible" >
+<button class="card-toggle">Global Players</button>
+<div class="card-content">
+
+<span class="label blue-back">News & Data</span>
+
+<div class="loop blue-side">
+
+<table>
+
+<tr>
+<th>Country</th>
+<th>Sources</th>
+<th>Keywords</th>
+</tr>
+
+<tr>
+<td>🇺🇸 USA<br>'Flexible <br>Supply'</td>
+<td>
+<a href="https://www.eia.gov/" target="_blank">✓ Eia</a><br>
+<a href="https://www.eia.gov/petroleum/supply/weekly/" target="_blank">✓ Weekly Report</a><br>
+<a href="https://rigcount.bakerhughes.com/" target="_blank">✓ Baker Hughes</a>
+</td>
+<td>
+- Eia Inventories<br>
+- Weekly Report<br>
+- SPR<br>
+- Shale Output<br>
+- Rig Count<br>
+- Energy Survey
+</td>
+</tr>
+
+<tr>
+<td>🇷🇺 Russia<br>'Large <br>Barrels'</td>
+<td>
+<a href="https://www.reuters.com/" target="_blank">✓ Reuters</a><br>
+<a href="https://ofac.treasury.gov/" target="_blank">✓ Ofac</a><br>
+<a href="https://www.spglobal.com/commodityinsights/" target="_blank">✓ S&P Global</a>
+</td>
+<td>
+- Export Flows<br>
+- Sanctions<br>
+- Shadow Fleet
+</td>
+</tr>
+
+<tr>
+<td>🇨🇳 China<br>'Demand <br>Signal'</td>
+<td>
+<a href="https://www.reuters.com/world/china/" target="_blank">✓ Reuters China</a><br>
+<a href="https://tradingeconomics.com/china/imports-of-crude-oil" target="_blank">✓ Trading Economics</a><br>
+<a href="https://www.stats.gov.cn/english/" target="_blank">✓ NBS</a>
+</td>
+<td>
+- Import Flows<br>
+- Crude Imports<br>
+- Stimulus<br>
+- Economics
+</td>
+</tr>
+
+<tr>
+<td>🇨🇦 Canada<br>'Stable <br>Supply'</td>
+<td>
+<a href="https://www.alberta.ca/" target="_blank">✓ Alberta</a><br>
+<a href="https://cwfis.cfs.nrcan.gc.ca/" target="_blank">✓ Wildfire Map</a><br>
+<a href="https://www.reuters.com/" target="_blank">✓ Reuters</a>
+</td>
+<td>
+- Oil Sands<br>
+- Wildfire Risk<br>
+- Pipeline News
+</td>
+</tr>
+
+<tr>
+<td>🇮🇶 Iraq<br>'Surprise <br>Factor'</td>
+<td>
+<a href="https://www.opec.org/" target="_blank">✓ OPEC</a><br>
+<a href="https://www.reuters.com/world/middle-east/" target="_blank">✓ Reuters</a>
+</td>
+<td>
+- Opec Quotas<br>
+- Export Routes
+</td>
+</tr>
+
+<tr>
+<td>🇱🇾 Libya<br>'Fast <br>Volatility'</td>
+<td>
+<a href="https://www.marinetraffic.com/" target="_blank">✓ Marine Traffic</a><br>
+<a href="https://www.reuters.com/world/africa/" target="_blank">✓ Reuters</a>
+</td>
+<td>
+- Port Flow<br>
+- Outages
+</td>
+</tr>
+
+<tr>
+<td>🚢 Shipping<br>'Risk <br>Premium'</td>
+<td>
+<a href="https://www.marinetraffic.com/" target="_blank">✓ Marine Traffic</a><br>
+<a href="https://www.vesselfinder.com/" target="_blank">✓ Vessel Finder</a><br>
+<a href="https://www.ukmto.org/" target="_blank">✓ UKMTO</a>
+</td>
+<td>
+- Hormuz Flow<br>
+- Red Sea<br>
+- Tanker Alerts
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+
+
+    <!-- ===============================
+    ️Analysis Toolbox
+    =============================== -->
+
+
+<div class="wix-wrapper">
+
+
+<section class="section hero-card orange-border">
+
+<h2>🛢️Analysis Toolbox</h2>
+
+<div class="panel-title">
+Tools for Scanning Gulf Headline Signals
+</div>
+
+</section>
+
+
+
+<!-- ===============================
+QUICK REFERENCE
+=============================== -->
+<section class="section collapsible">
+<button class="card-toggle">Quick Reference</button>
+<div class="card-content">
+    
+<span class="label orange-back">Analysis Tools</span>
+
+<div class="loop orange-side">
+
+<table>
+<tr>
+<th>Source</th>
+<th>Signal</th>
+<th></th>
+</tr>
+
+<tr><td>Saudi</td><td>sets the tone</td><td></td></tr>
+<tr><td>Iran</td><td>applies the pressure</td><td></td></tr>
+<tr><td>Qatar</td><td>writes the story</td><td></td></tr>
+<tr><td>Israel</td><td>reflects the risk</td><td></td></tr>
+<tr><td>UAE</td><td>manages the reality</td><td></td></tr>
+<tr><td>Oman</td><td>opens the backchannels</td><td></td></tr>
+<tr><td>Yemen</td><td>disrupts the flow</td><td></td></tr>
+<tr><td>Kuwait</td><td>confirms the direction</td><td></td></tr>
+<tr><td>Bahrain</td><td>aligns the bloc</td><td></td></tr>
+<tr><td>Reuters</td><td>tells you if you're late</td><td></td></tr>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- ===============================
+HEADLINE SIGNAL
+=============================== -->
+
+<section class="section collapsible">
+<button class="card-toggle">Headline Signal</button>
+<div class="card-content">
+
+<span class="label orange-back">Analysis Tools</span>
+
+<div class="loop orange-side">
+
+<table>
+
+<tr>
+<th>Source</th>
+<th>Meaning</th>
+<th>Bias</th>
+</tr>
+
+<tr><td>Saudi</td><td>Gulf Coord <br> Supply<br>Output<br>Tone</td><td>Trend</td></tr>
+<tr><td>Iran</td><td>Tension <br>Sanctions <br>Risk<br>Threats<br>Talks</td><td>Volatility ↑</td></tr>
+<tr><td>Qatar</td><td>Narrative Framing<br>Mediation</td><td>Sentiment</td></tr>
+<tr><td>Israel</td><td>Security</td><td>Spike</td></tr>
+<tr><td>UAE</td><td>Logistics<br>Flows<br>Exports</td><td>Physical</td></tr>
+<tr><td>Oman</td><td>Mediation <br>Talks<br>Backchannels</td><td>Risk ↓</td></tr>
+<tr><td>Yemen</td><td>Red Sea Disruption<br>Sea Attacks</td><td>Spike ↑</td></tr>
+<tr><td>Kuwait</td><td>Policy Alignment</td><td>Confirm</td></tr>
+<tr><td>Bahrain</td><td>GCC Unity</td><td>Consensus</td></tr>
+<tr><td>Reuters</td><td>Market Reaction <br>Lag<br>Explains </td><td>Late Signal<br>Timing</td></tr>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- ===============================
+FURTHER SIGNALS
+=============================== -->
+<section class="section collapsible">
+<button class="card-toggle">Further Signals</button>
+<div class="card-content">
+
+<span class="label orange-back">Analysis Tools</span>
+
+<div class="loop orange-side">
+
+<table>
+
+<tr>
+<th>Country</th>
+<th>Signal I </th>
+<th>Signal II</th>
+</tr>
+
+<tr>
+<td>🇸🇦 Saudi</td>
+<td>Production Cuts, Balance, Stability Tone</td>
+<td>Wording Changes Matter More Than Headlines</td>
+</tr>
+
+<tr>
+<td>🇮🇷 Iran</td>
+<td>Sanctions, Retaliation, Talks</td>
+<td>Drives Risk Premium</td>
+</tr>
+
+<tr>
+<td>🇶🇦 Qatar</td>
+<td>Mediation, Diplomacy, Framing</td>
+<td>Shapes Narrative Before Price Moves</td>
+</tr>
+
+<tr>
+<td>🇮🇱 Israel</td>
+<td>Security Devt</td>
+<td>Fast Volatility Catalyst</td>
+</tr>
+
+<tr>
+<td>🇦🇪 UAE</td>
+<td>Indt Output, Policy, Exports, Invt Power</td>
+<td>Often Pragmatic Signal & Less Theatrical Noise</td>
+</tr>
+
+<tr>
+<td>🇴🇲 Oman</td>
+<td>Diplomacy, Regional Channels, Shipping Sentiment</td>
+<td>Useful Early Clue When Tensions Cool</td>
+</tr>
+
+<tr>
+<td>🇾🇪 Yemen</td>
+<td>Red Sea Attacks, Houthi Activity, Shipping Risk</td>
+<td>Can Spike Oil Via Route Fear</td>
+</tr>
+
+<tr>
+<td>🇰🇼 Kuwait</td>
+<td>Gulf Coord, Producer Voice, Capacity Signals</td>
+<td>Usually Confirms Broader Gulf Direction</td>
+</tr>
+
+<tr>
+    <td>🇧🇭 Bahrain</td>
+    <td>Security Posture, Gulf Bloc Voice, Naval Relevance</td>
+    <td>Small Producer, Bigger Strategic Location</td>
+    </tr>
+    
+<tr>
+    <td>🌍 Reuters</td>
+    <td>Market Reaction</td>
+    <td>If explained cleanly, move is already done</td>
+    </tr>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+
+
+
+ <!-- ===============================
+    Homework Routine
+    =============================== -->
+
+<div class="wix-wrapper">
+    
+
+<section class="section hero-card white-border">
+
+<h3>🛢️Homework Routine</h3>
+
+<div class="panel-title">
+General Tips
+</div>
+
+</section>
+
+
+
+<!-- ===============================
+GOLDEN RULES
+=============================== -->
+<section class="section collapsible" >
+<button class="card-toggle">Rules</button>
+<div class="card-content">
+
+<span class="label white-back">General Tips</span>
+
+<div class="loop white-side">
+
+<div class="rule">✓ Read Scheduled Data First</div>
+<div class="rule">✓ Read Headlines Second</div>
+<div class="rule">✓ Price Reaction Beats Opinion</div>
+<div class="rule">✓ Drama Without Barrels = Noise</div>
+<div class="rule">✓ If Reuters Explains It, You’re Late</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- ===============================
+READING
+=============================== -->
+
+<section class="section collapsible" >
+<button class="card-toggle">Reading</button>
+<div class="card-content">
+
+<span class="label white-back">General Tips</span>
+
+<div class="loop white-side">
+
+<div class="rule"><strong>Daily • 5 Mins</strong><br>
+Reuters Energy • Saudi Sources • Iran & Israel • Chart Action • Shipping Alerts
+</div>
+
+<div class="rule"><strong>Weekly • 15 Mins</strong><br>
+EIA Inventories • Rig Count • OPEC Reports • China Demand • Russia Flows
+</div>
+
+<div class="rule"><strong>Crisis Only</strong><br>
+Hormuz Threat • Yemen Escalation • War Expansion • Producer Shock Outage • Major Sanctions Package
+</div>
+
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+
+
+<script>
+document.querySelectorAll('.card-toggle').forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    const currentCard = btn.parentElement;
+    const isOpen = currentCard.classList.contains('open');
+
+    document.querySelectorAll('.collapsible').forEach(card => {
+      card.classList.remove('open');
+    });
+
+    if(!isOpen){
+      currentCard.classList.add('open');
+    }
+
+  });
+
+});
+</script>
+
+</body>
+</html>
