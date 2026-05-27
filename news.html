@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Miaow Times</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --bg: #404040;
+      --panel: #4a4a4a;
+      --card: #4b4b4b;
+      --text: #ffffff;
+      --muted: #acabab;
+      --accent: #f97803;
+      --border: rgba(255,255,255,0.06);
+      --shadow: rgba(0,0,0,0.35);
+    }
+
+    /* =========================
+       GLOBAL RESET
+    ========================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background: var(--bg);
+      color: var(--muted);
+      font-family:'Quicksand', sans-serif;
+      line-height:1.7;
+      display:flex;
+      justify-content:center;
+      padding:3rem 1.2rem 5rem;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    img{
+      display:block;
+    }
+
+    /* =========================
+       MAIN WRAPPER
+    ========================== */
+
+    .container{
+      width:100%;
+      max-width:900px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero{
+      margin-bottom:3rem;
+      padding:2.4rem 2rem;
+      border-radius:22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(249,120,3,0.10),
+          rgba(255,255,255,0.02)
+        );
+      border:1px solid var(--border);
+      box-shadow:
+        0 12px 30px var(--shadow);
+    }
+
+    .hero h1{
+      color:var(--text);
+      font-size:clamp(2.2rem, 5vw, 3.5rem);
+      font-weight:700;
+      letter-spacing:0.02em;
+      margin-bottom:0.6rem;
+    }
+
+    .tagline{
+      color:var(--accent);
+      font-size:1.05rem;
+      margin-bottom:1.8rem;
+      font-style:italic;
+    }
+
+    .intro{
+      max-width:700px;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .intro p{
+      margin-bottom:1rem;
+    }
+
+    /* =========================
+       SECTION CARD
+    ========================== */
+
+    .section{
+      background:var(--card);
+      border-radius:18px;
+      padding:1.6rem;
+      margin-bottom:2rem;
+      border:1px solid var(--border);
+
+      box-shadow:
+        0 10px 24px rgba(0,0,0,0.22);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .section:hover{
+      transform:translateY(-3px);
+
+      box-shadow:
+        0 16px 34px rgba(0,0,0,0.30);
+
+      border-color:
+        rgba(249,120,3,0.25);
+    }
+
+    /* =========================
+       HEADINGS
+    ========================== */
+
+    .section h2{
+      display:flex;
+      align-items:center;
+      gap:12px;
+
+      color:var(--text);
+      font-size:1.15rem;
+      font-weight:700;
+
+      margin-bottom:1.6rem;
+
+      letter-spacing:0.04em;
+    }
+
+    .flag{
+      width:36px;
+      height:24px;
+      border-radius:4px;
+      overflow:hidden;
+      flex-shrink:0;
+
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    /* =========================
+       LINKS
+    ========================== */
+
+    .section ul{
+      list-style:none;
+    }
+
+    .section li{
+      margin-bottom:0.7rem;
+    }
+
+    .section a{
+      position:relative;
+
+      display:inline-block;
+
+      color:var(--text);
+
+      padding-left:1.3rem;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .section a::before{
+      content:"›";
+
+      position:absolute;
+      left:0;
+
+      color:var(--accent);
+      font-weight:700;
+    }
+
+    .section a:hover{
+      color:var(--accent);
+      transform:translateX(3px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      margin-top:4rem;
+      text-align:center;
+      color:#8e8e8e;
+      font-size:0.85rem;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width:640px){
+
+      body{
+        padding:1.4rem 0.9rem 4rem;
+      }
+
+      .hero{
+        padding:1.8rem 1.4rem;
+      }
+
+      .section{
+        padding:1.3rem;
+      }
+
+      .section h2{
+        font-size:1rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+      <h1>The Miaow Times</h1>
+
+      <p class="tagline">
+        “If knowledge is power, then napping is a superpower.”
+      </p>
+
+      <div class="intro">
+        <p>
+          Stay informed with curated world news and headlines.
+        </p>
+
+        <p>
+          Explore major stories across regions and perspectives,
+          selected for clarity and relevance.
+        </p>
+
+        <p>
+          A curated space to follow current affairs, track developments,
+          and maintain a clear view of the world.
+        </p>
+      </div>
+
+    </header>
+
+   <!-- UNITED KINGDOM -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_4fbeaa50af454e298a6328112ade0d7c.svg" alt="United Kingdom" title="United Kingdom">
+        UNITED KINGDOM
+      </h3>
+      <ul>
+        <li><a href="https://news.google.com/home?hl=en-GB&gl=GB&ceid=GB:en" target="_blank">Google News UK</a></li>
+        <li><a href="https://news.sky.com/topic/newspapers-5993" target="_blank">Sky News – Front Pages</a></li>
+        <li><a href="https://www.thetimes.co.uk" target="_blank">The Times</a></li>
+        <li><a href="https://www.telegraph.co.uk" target="_blank">The Telegraph</a></li>
+        <li><a href="https://www.theguardian.com/international" target="_blank">The Guardian</a></li>
+        <li><a href="https://www.express.co.uk" target="_blank">Daily Express</a></li>
+        <li><a href="https://www.thetimes.co.uk/radio/live" target="_blank">Times Radio</a></li>
+        <li><a href="https://www.gbnews.com" target="_blank">GB News</a></li>
+        <li><a href="https://talk.tv" target="_blank">TalkTV</a></li>
+        <li><a href="https://www.standard.co.uk" target="_blank">The Standard</a></li>
+        <li><a href="https://thelondonstandard.pressreader.com/the-london-standard" target="_blank">The London Standard</a></li>
+        <li><a href="https://metro.co.uk" target="_blank">Metro</a></li>
+        <li><a href="https://www.scotsman.com" target="_blank">The Scotsman</a></li>
+        <li><a href="https://www.heraldscotland.com" target="_blank">The Herald Scotland</a></li>
+        <li><a href="https://www.thenational.scot" target="_blank">The National</a></li>
+      </ul>
+    </section>
+
+    <!-- GEOPOLITICS -->
+    <section class="section">
+      <h3>🌍 GEOPOLITICS</h3>
+      <ul>
+        <li><a href="https://www.politico.eu/uk" target="_blank">Politico </a></li>
+        <li><a href="https://www.prospectmagazine.co.uk" target="_blank">Prospect Magazine</a></li>
+        <li><a href="https://www.spectator.co.uk" target="_blank">The Spectator</a></li>
+        <li><a href="https://www.newstatesman.com" target="_blank">New Statesman</a></li>
+        <li><a href="https://www.newsweek.com" target="_blank">Newsweek</a></li>
+        <li><a href="https://www.economist.com" target="_blank">The Economist</a></li>
+        <li><a href="https://liveuamap.com" target="_blank">Live UA Map</a></li>
+      </ul>
+    </section>
+
+    <!-- EUROPE -->
+    <section class="section">
+      <h3>
+       <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_0055c765f4e748ed826223955ac7b222.svg" alt="Europe" title="Europe">EUROPE
+      </h3>
+      <ul>
+        <li><a href="https://www.euronews.com" target="_blank">Euronews</a></li>
+        <li><a href="https://www.reuters.com/world" target="_blank">Reuters – World</a></li>
+        <li><a href="https://www.dw.com/en/top-stories/s-9097" target="_blank">Deutsche Welle</a></li>
+        <li><a href="https://elpais.com/internacional" target="_blank">El País – World</a></li>
+        <li><a href="https://www.lemonde.fr/?preferred_lang=fr" target="_blank">Le Monde</a></li>
+        <li><a href="https://www.corriere.it" target="_blank">Corriere della Sera</a></li>
+      </ul>
+    </section>
+
+    <!-- UNITED STATES -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_cb21d6324a554564a2dd0d942c9e7989.svg" alt="United States" title="United States">        UNITED STATES
+      </h3>
+      <ul>
+        <li><a href="https://news.google.com/home?hl=en-US&gl=US&ceid=US:en" target="_blank">Google News US</a></li>
+        <li><a href="https://www.nytimes.com" target="_blank">The New York Times</a></li>
+        <li><a href="https://www.wsj.com" target="_blank">The Wall Street Journal</a></li>
+      </ul>
+    </section>
+
+    <!-- JAPAN -->
+    <section class="section">
+      <h3>
+        <img class="flag" src="https://static.wixstatic.com/shapes/b6ca85_6a0f45bc778d4f4580f93317007303ae.svg" alt="Japan" title="Japan">
+        Japan
+      </h3>
+      <ul>
+        <li><a href="https://www.japantimes.co.jp/news/world" target="_blank">The Japan Times - World</a></li>
+        <li><a href="https://japannews.yomiuri.co.jp/world" target="_blank">The Japan News - World</a></li>
+        
+      </ul>
+    </section>
+
+
+    <footer>
+      The Miaow Times © 2026 • Curated with caffeine, skepticism and mild feline superiority.
+    </footer>
+
+  </div>
+
+</body>
+</html>
