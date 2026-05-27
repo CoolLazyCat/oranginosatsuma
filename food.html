@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gourmand Cat</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --station-color: #f97803;
+  --bg: #404040;
+  --text: #ffffff;
+  --hover: #f97803;
+}
+
+/* RESET */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Quicksand', sans-serif;
+}
+
+html, body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* WRAPPER */
+.wix-wrapper{
+  max-width: 12cm;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+/* HEADER (optional aesthetic anchor) */
+header{
+  text-align:center;
+  margin-bottom: 2rem;
+}
+
+header h1{
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--station-color);
+  margin-bottom: 0.5rem;
+}
+
+header p{
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* SECTION */
+.section{
+  margin-bottom: 2.2rem;
+}
+
+.section h3{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+/* LIST */
+.section ul{
+  list-style: none;
+}
+
+.section li{
+  margin-bottom: 0.7rem;
+}
+
+/* LINKS */
+.section a{
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+  padding-left: 1rem;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.section a::before{
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--station-color);
+  transition: 0.25s ease;
+}
+
+.section a:hover{
+  color: var(--hover);
+  text-shadow: 0 0 6px rgba(249,120,3,0.35);
+}
+
+.section a:hover::before{
+  transform: translateX(3px);
+}
+
+/* MOBILE OPTIMISATION */
+@media (max-width: 600px){
+  .wix-wrapper{
+    max-width: 95%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wix-wrapper">
+
+<header>
+  <h1>Gourmand Cat</h1>
+  <p>
+    “Outside the croissant there is nothing. Become one with the croissant.”
+    — Zen Cat 🐾
+  </p>
+  <p>
+    Explore food through curated recipes and visual inspiration.
+Browse Pinterest Boards for meals, snacks, and ideas (preferably with chocolate).
+A space to spark creativity, simplify planning, and create your own dishes. Think outside the plate!
+  </p>
+</header>
+
+<main>
+
+ <!-- SAVOURY -->
+    <section class="section">
+      <h3>SAVOURY<br>🍜🍳 </h3>
+      <ul>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-breakfast/" target="_blank">Breakfast</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-toast/" target="_blank">Toast</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-cheese-boards/" target="_blank">Cheese Boards</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-salads/" target="_blank">Salads</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-soups/" target="_blank">Soups</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-eggs-potts-veggs/" target="_blank">Eggs & Veggies</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-pasta-risotto/" target="_blank">Pasta & Risotto</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-east-asia/" target="_blank">East Asia</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-seafood-fish/" target="_blank">Seafood & Fish</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-beef/" target="_blank">Beef</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-baked/" target="_blank">Baked Food</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-food-pizza/" target="_blank">Pizza</a></li>
+      </ul>
+    </section>
+
+  <!-- SWEET -->
+    <section class="section">
+      <h3>SWEET<br>🍰🧁</h3>
+      <ul>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-sweet-desserts/" target="_blank">Desserts</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-sweet-cakes/" target="_blank">Cakes</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-sweet-scones/" target="_blank">Scones</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-sweet-ice-cream/" target="_blank">Ice Cream</a></li>
+      </ul>
+    </section>
+
+   <!-- REFRESHMENTS -->
+    <section class="section">
+      <h3>REFRESHMENTS <br>🫖☕</h3>
+      <ul>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-refresh-icedcoffee/" target="_blank">Iced Coffee</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-refresh-icedtea/" target="_blank">Iced Tea</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-refresh-smoothies/" target="_blank">Smoothies</a></li>
+      </ul>
+    </section>
+
+  <!-- STAPLES -->
+    <section class="section">
+      <h3>STAPLES <br>🍾🥂</h3>
+      <ul>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-staples-cocktails/" target="_blank">Cocktails</a></li>
+        <li><a href="https://uk.pinterest.com/OranginoSatsuma/1-staples-wine-history/" target="_blank">Wine & History</a></li>
+      </ul>
+    </section>
+
+</main>
+</div>
+
+</body>
+</html>
